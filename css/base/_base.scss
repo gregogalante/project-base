@@ -40,10 +40,16 @@ $font_title: $font_default;
 // Font-size
 $size_font: 16px;
 
+$size_line_height: 1.5;
+$size_letter_spacing: 0.1;
+
 // Other sizes
 // $size_title_line_height: ...
 
 // ----------------------------
 /* Others variable */
 
-// $custom_homepage_width: ...
+// Z-index default value
+$z-index_header: 100;
+$z-index_footer: 90;
+$z-index_main: 10;
