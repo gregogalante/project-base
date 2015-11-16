@@ -1,0 +1,8 @@
+@import 'base/base';
+@import 'modules/modules';
+@import 'pages/pages';
+
+body {
+  font-family: $font_default, $font_base;
+  font-size: $size_font;
+}
