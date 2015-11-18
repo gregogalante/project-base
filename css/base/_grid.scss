@@ -3,27 +3,28 @@
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: $size_container_padding;
+  padding-right: $size_container_padding;
+  @include cf();
 }
 @media (min-width: $breakpoint_mobile) {
   .container {
-    width: $breakpoint_mobile - 15px;
+    width: $breakpoint_mobile - $size_container_margin;
   }
 }
 @media (min-width: $breakpoint_tablet_sm) {
   .container {
-    width: $breakpoint_tablet_sm - 15px;
+    width: $breakpoint_tablet_sm - $size_container_margin;
   }
 }
 @media (min-width: $breakpoint_tablet_md) {
   .container {
-    width: $breakpoint_tablet_md - 15px;
+    width: $breakpoint_tablet_md - $size_container_margin;
   }
 }
 @media (min-width: $breakpoint_tablet_lg) {
   .container {
-    width: $breakpoint_tablet_lg - 15px;
+    width: $breakpoint_tablet_lg - $size_container_margin;
   }
 }
 @media (min-width: $breakpoint_desktop) {
@@ -34,6 +35,7 @@
 .container-fluid {
   margin-right: auto;
   margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: $size_container_padding;
+  padding-right: $size_container_padding;
+  @include cf();
 }
