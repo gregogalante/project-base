@@ -364,7 +364,13 @@ th {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  *zoom: 1; }
+  .container:before, .container:after {
+    content: '';
+    display: table; }
+  .container:after {
+    clear: both; }
 
 @media (min-width: 580px) {
   .container {
@@ -385,7 +391,13 @@ th {
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
-  padding-right: 15px; }
+  padding-right: 15px;
+  *zoom: 1; }
+  .container-fluid:before, .container-fluid:after {
+    content: '';
+    display: table; }
+  .container-fluid:after {
+    clear: both; }
 
 /* BASIC FONTS FOR PROJECT */
 @font-face {
