@@ -1,29 +1,17 @@
 /* BASIC MIXINS FOR PROJECT */
 
-@mixin border-radius($radius) {
-  -webkit-border-radius: $radius;
-  -moz-border-radius: $radius;
-  -ms-border-radius: $radius;
-  border-radius: $radius;
-}
-
-@mixin box-shadow($a, $b, $c, $d, $color) {
-  -webkit-box-shadow: $a $b $c $d $color;
-  -moz-box-shadow: $a $b $c $d $color;
-  -ms-box-shadow: $a $b $c $d $color;
-  box-shadow: $a $b $c $d $color;
-}
-
-@mixin transition($args...) {
-  -webkit-transition: $args;
-  -moz-transition: $args;
-  -ms-transition: $args;
-  -o-transition: $args;
-  transition: $args;
-}
-
+// Opacity for IE 8
 @mixin opacity($opacity) {
   opacity: $opacity;
   $opacity-ie: $opacity * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+// Hide text without remove it
+@mixin hidetext() {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
 }
