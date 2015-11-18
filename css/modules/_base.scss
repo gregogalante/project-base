@@ -1,0 +1,20 @@
+/* BASIC STYLE */
+
+body {
+  font-family: $font_default, $font_base;
+  font-size: $size_font;
+  line-height: $size_line_height;
+  letter-spacing: $size_letter_spacing;
+}
+
+header {
+  z-index: $z-index_header;
+}
+
+footer {
+  z-index: $z-index_footer;
+}
+
+main {
+  z-index: $z-index_main;
+}

@@ -1,0 +1,50 @@
+/* BASIC VARIABLES FOR PROJECT */
+
+// ----------------------------
+/* Colors */
+
+// Default colors
+$color_black: #000000;
+$color_white: #ffffff;
+$color_primary: #ffffff;
+$color_secondary: #222222;
+// $color_third: ...
+
+// Font colors
+$color_font: $color_black;
+$color_font_title: $color_black;
+
+// ----------------------------
+/* Fonts */
+
+$font_base: sans-serif;
+$font_default: Underground;
+
+$font_title: $font_default;
+
+// ----------------------------
+/* Size */
+
+// Font-size
+$size_font: 16px;
+
+$size_line_height: 1.5;
+$size_letter_spacing: 0.1;
+
+// ----------------------------
+/* Grid variable */
+
+// Container breakpoints
+$breakpoint_mobile: 580px;
+$breakpoint_tablet_sm: 768px;
+$breakpoint_tablet_md: 992px;
+$breakpoint_tablet_lg: 1024px;
+$breakpoint_desktop: 1170px;
+
+// ----------------------------
+/* Others variable */
+
+// Z-index default value
+$z-index_header: 100;
+$z-index_footer: 90;
+$z-index_main: 10;

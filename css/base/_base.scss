@@ -1,55 +1,7 @@
+@import 'jeet/_jeet.scss';
 @import 'default';
+@import 'variables';
 @import 'grid';
 @import 'fonts';
 @import 'function';
 @import 'mixin';
-
-/* BASIC VARIABLES FOR PROJECT */
-
-// ----------------------------
-/* Colors */
-
-// Default colors
-$color_black: #000000;
-$color_white: #ffffff;
-$color_primary: #ffffff;
-$color_secondary: #222222;
-// $color_third: ...
-
-// Font colors
-$color_font: $color_black;
-$color_font_title: $color_black;
-
-// Other colors
-// $color_background_types: ...
-
-// ----------------------------
-/* Fonts */
-
-$font_base: sans-serif;
-$font_default: Underground;
-
-$font_title: $font_default;
-
-// Other fonts
-// $font_menu_item: ...
-
-// ----------------------------
-/* Size */
-
-// Font-size
-$size_font: 16px;
-
-$size_line_height: 1.5;
-$size_letter_spacing: 0.1;
-
-// Other sizes
-// $size_title_line_height: ...
-
-// ----------------------------
-/* Others variable */
-
-// Z-index default value
-$z-index_header: 100;
-$z-index_footer: 90;
-$z-index_main: 10;
