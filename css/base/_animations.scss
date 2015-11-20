@@ -4,29 +4,135 @@
 
 DOCUMENTAZIONE
 
-1. translate($translate_value, $translate_direction)
+1. translate($translate_value, $translate_direction, $duration)
 Esegue una traslazione dell'elemento.
 La distanza della traslazione è impostata attraverso $translate_value; la direzione in cui
 la traslazione deve avvenire è indicata attraverso $translate_direction (il quale può assumere
-valore right, left, top, bottom)
+valore right, left, top, bottom); la durata dell'animazione è indicata attraverso $duration.
+
+2. pulse($duration)
+Esegue una pulsazione dell'elemento.
+La durata della animazione è settata dall'unico parametro $duration.
+Di default viene utilizzato un range compreso tra 1.1 e 0.9 della figura iniziale.
+
+3. push($duration)
+Esegue una animazione di click sull'elemento.
+La durata della animazione è settata dall'unico parametro $duration.
+Di default viene l'elemento viene pressato a 0.8 della figura iniziale.
+
+3. bounceOut($duration)
+Esegue una animazione di click sull'elemento.
+La durata della animazione è settata dall'unico parametro $duration.
+Di default viene l'elemento viene pressato a 0.8 della figura iniziale.
+
+4. buzz($duration)
+Esegue una animazione di 'sveglia' sull'elemento.
+La durata della animazione è settata dall'unico parametro $duration.
 
 */
 
 // Translate animation
-@mixin translate($translate_value, $translate_direction) {
-  @if $translate_direction == 'top' {
-    transform: translateY(- $translate_value);
+@mixin translate($translate_value, $translate_direction, $duration) {
+
+  transition: transform $duration;
+
+  &:hover {
+    @if $translate_direction == 'top' {
+      transform: translateY(- $translate_value);
+    }
+    @if $translate_direction == 'left' {
+      transform: translateX(- $translate_value);
+    }
+    @if $translate_direction == 'bottom' {
+      transform: translateY($translate_value);
+    }
+    @if $translate_direction == 'right' {
+      transform: translateX($translate_value);
+    }
+    transition-property: -webkit-transform, opacity;
+    transition-property: transform, opacity;
+    backface-visibility: hidden;
   }
-  @if $translate_direction == 'left' {
-    transform: translateX(- $translate_value);
-  }
-  @if $translate_direction == 'bottom' {
-    transform: translateY($translate_value);
-  }
-  @if $translate_direction == 'right' {
-    transform: translateX($translate_value);
-  }
-  transition-property: -webkit-transform, opacity;
-  transition-property: transform, opacity;
+}
+
+// Pulse animation
+@mixin pulse($duration) {
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   backface-visibility: hidden;
+
+  &:hover, &:focus, &:active {
+    animation-name: pulse;
+    animation-duration: $duration;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes pulse {
+  25% {transform: scale(1.1);}
+  75% {transform: scale(0.9);}
+}
+
+// Push animation
+@mixin push($duration) {
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+
+  &:hover, &:focus, &:active {
+    animation-name: push;
+    animation-duration: $duration;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+  }
+}
+
+@keyframes push {
+  50% {transform: scale(0.8);}
+  100% {transform: scale(1);}
+}
+
+// BounceOut animation
+@mixin bounceOut($duration) {
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  transition-duration: $duration;
+
+  &:hover, &:focus, &:active {
+    transform: scale(0.8);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }
+}
+
+// Buzz animation
+@mixin buzz($duration) {
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+
+  &:hover, &:focus, &:active {
+    animation-name: buzz;
+    animation-duration: $duration;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes buzz {
+  50% {transform: translateX(3px) rotate(2deg);}
+  100% {transform: translateX(-3px) rotate(-2deg);}
 }

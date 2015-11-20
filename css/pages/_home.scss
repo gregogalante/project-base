@@ -1,0 +1,15 @@
+// Test code.
+.test {
+  background-color: $color_secondary;
+  margin: 10% auto;
+  padding: $size_container_padding;
+  @include column(1/2,1/4);
+  @include pulse(1s);
+
+  h1 {
+    margin: auto;
+    text-align: center;
+    color: $color_primary;
+    letter-spacing: $size_letter_spacing + 2.5px;
+  }
+}
