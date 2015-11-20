@@ -6,13 +6,19 @@
 // Default colors
 $color_black: #000000;
 $color_white: #ffffff;
-$color_primary: #ffffff;
-$color_secondary: #222222;
+$color_primary: #913131;
+$color_secondary: #E5AB39;
 // $color_third: ...
 
 // Font colors
 $color_font: $color_black;
 $color_font_title: $color_black;
+
+// Modules colors
+
+$color_body_bg: $color_primary;
+$color_header_bg: $color_primary;
+$color_footer_bg: $color_primary;
 
 // ----------------------------
 /* Fonts */
@@ -25,24 +31,21 @@ $font_title: $font_default;
 // ----------------------------
 /* Size */
 
-// Font-size
+// Font size
 $size_font: 16px;
-
 $size_line_height: 1.5;
 $size_letter_spacing: 0.1;
 
+// Container size
 $size_container_padding: 15px;
 $size_container_margin: 15px;
 
-// ----------------------------
-/* Grid variable */
-
-// Container breakpoints
-$breakpoint_mobile: 580px;
-$breakpoint_tablet_sm: 768px;
-$breakpoint_tablet_md: 992px;
-$breakpoint_tablet_lg: 1024px;
-$breakpoint_desktop: 1170px;
+// Brakpoint size
+$size_breakpoint_mobile: 580px;
+$size_breakpoint_tablet_sm: 768px;
+$size_breakpoint_tablet_md: 992px;
+$size_breakpoint_tablet_lg: 1024px;
+$size_breakpoint_desktop: 1170px;
 
 // ----------------------------
 /* Others variable */

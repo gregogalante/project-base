@@ -1,0 +1,32 @@
+/* BASIC ANIMATIONS FOR PROJECT */
+
+/*
+
+DOCUMENTAZIONE
+
+1. translate($translate_value, $translate_direction)
+Esegue una traslazione dell'elemento.
+La distanza della traslazione è impostata attraverso $translate_value; la direzione in cui
+la traslazione deve avvenire è indicata attraverso $translate_direction (il quale può assumere
+valore right, left, top, bottom)
+
+*/
+
+// Translate animation
+@mixin translate($translate_value, $translate_direction) {
+  @if $translate_direction == 'top' {
+    transform: translateY(- $translate_value);
+  }
+  @if $translate_direction == 'left' {
+    transform: translateX(- $translate_value);
+  }
+  @if $translate_direction == 'bottom' {
+    transform: translateY($translate_value);
+  }
+  @if $translate_direction == 'right' {
+    transform: translateX($translate_value);
+  }
+  transition-property: -webkit-transform, opacity;
+  transition-property: transform, opacity;
+  backface-visibility: hidden;
+}

@@ -1,1 +1,22 @@
-/* IMPORT HERE YOUR CUSTOM PAGES FILES */
+@import 'home'; // Stile dell' homepage del progetto
+
+// Test code.
+.test {
+  transition: all 1s;
+  width: 250px;
+  height: 200px;
+  background-color: $color_secondary;
+  margin: 10% auto;
+  padding: $size_container_padding;
+
+  &:hover {
+
+  }
+
+  h1 {
+    margin: auto;
+    text-align: center;
+    color: $color_primary;
+    letter-spacing: $size_letter_spacing + 2.5px;
+  }
+}

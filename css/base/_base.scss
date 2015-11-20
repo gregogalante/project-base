@@ -1,7 +1,9 @@
-@import 'jeet/_jeet.scss';
-@import 'default';
-@import 'variables';
-@import 'grid';
-@import 'fonts';
-@import 'function';
-@import 'mixin';
+@import 'default'; // Codice CSS di reset
+@import 'mixin'; // Helper
+@import 'animations'; // Animazioni
+
+@import 'jeet/_jeet.scss'; // Framework per la griglia
+
+@import 'variables'; // Variabili del progetto
+@import 'grid'; // Definizione della griglia del progetto
+@import 'fonts'; // Definizione dei fonts del progetto

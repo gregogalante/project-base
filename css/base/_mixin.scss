@@ -1,17 +1,41 @@
 /* BASIC MIXINS FOR PROJECT */
 
+/*
+
+DOCUMENTAZIONE
+
+1. opacity($opacity_value)
+Imposta l'opacità di un elemento rispetto al valore ricevuto come parametro.
+L'opacità risulta compatibile fino a IE 8.
+
+2. hideText()
+Rende invisibile il testo contenuto dall'elemento senza però nasconderlo ai motori di ricerca.
+
+3. oneLineText()
+Imposta il testo in una sola riga; nel caso in cui esso esca dal contenitore, viene eliminata la parte
+in più e sostituita con tre puntini di continuazione.
+
+*/
+
 // Opacity for IE 8
-@mixin opacity($opacity) {
-  opacity: $opacity;
-  $opacity-ie: $opacity * 100;
+@mixin opacity($opacity_value) {
+  opacity: $opacity_value;
+  $opacity-ie: $opacity_value * 100;
   filter: alpha(opacity=$opacity-ie); //IE8
 }
 
 // Hide text without remove it
-@mixin hidetext() {
+@mixin hideText() {
   clip: rect(1px, 1px, 1px, 1px);
   height: 1px;
   overflow: hidden;
   position: absolute;
   width: 1px;
+}
+
+// Set text in one line
+@mixin oneLineText() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

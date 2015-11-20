@@ -5,18 +5,26 @@ body {
   font-size: $size_font;
   line-height: $size_line_height;
   letter-spacing: $size_letter_spacing;
+  color: $color_font;
+  background-color: $color_body_bg;
 }
 
 header {
   z-index: $z-index_header;
+  background-color: $color_header_bg;
 }
 
 footer {
   z-index: $z-index_footer;
+  background-color: $color_footer_bg;
 }
 
 main {
   z-index: $z-index_main;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: $color_font_title;
 }
 
 img {

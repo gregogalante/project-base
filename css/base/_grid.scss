@@ -7,29 +7,29 @@
   padding-right: $size_container_padding;
   @include cf();
 }
-@media (min-width: $breakpoint_mobile) {
+@media (min-width: $size_breakpoint_mobile) {
   .container {
-    width: $breakpoint_mobile - $size_container_margin;
+    width: $size_breakpoint_mobile - $size_container_margin;
   }
 }
-@media (min-width: $breakpoint_tablet_sm) {
+@media (min-width: $size_breakpoint_tablet_sm) {
   .container {
-    width: $breakpoint_tablet_sm - $size_container_margin;
+    width: $size_breakpoint_tablet_sm - $size_container_margin;
   }
 }
-@media (min-width: $breakpoint_tablet_md) {
+@media (min-width: $size_breakpoint_tablet_md) {
   .container {
-    width: $breakpoint_tablet_md - $size_container_margin;
+    width: $size_breakpoint_tablet_md - $size_container_margin;
   }
 }
-@media (min-width: $breakpoint_tablet_lg) {
+@media (min-width: $size_breakpoint_tablet_lg) {
   .container {
-    width: $breakpoint_tablet_lg - $size_container_margin;
+    width: $size_breakpoint_tablet_lg - $size_container_margin;
   }
 }
-@media (min-width: $breakpoint_desktop) {
+@media (min-width: $size_breakpoint_desktop) {
   .container {
-    width: $breakpoint_desktop - 15px;
+    width: $size_breakpoint_desktop - 15px;
   }
 }
 .container-fluid {

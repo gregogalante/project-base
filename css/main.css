@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -353,11 +354,39 @@ td,
 th {
   padding: 0; }
 
+/* BASIC MIXINS FOR PROJECT */
+/*
+
+DOCUMENTAZIONE
+
+1. opacity($opacity_value)
+Imposta l'opacità di un elemento rispetto al valore ricevuto come parametro.
+L'opacità risulta compatibile fino a IE 8.
+
+2. hideText()
+Rende invisibile il testo contenuto dall'elemento senza però nasconderlo ai motori di ricerca.
+
+3. oneLineText()
+Imposta il testo in una sola riga; nel caso in cui esso esca dal contenitore, viene eliminata la parte
+in più e sostituita con tre puntini di continuazione.
+
+*/
+/* BASIC ANIMATIONS FOR PROJECT */
+/*
+
+DOCUMENTAZIONE
+
+1. translate($translate_value, $translate_direction)
+Esegue una traslazione dell'elemento.
+La distanza della traslazione è impostata attraverso $translate_value; la direzione in cui
+la traslazione deve avvenire è indicata attraverso $translate_direction (il quale può assumere
+valore right, left, top, bottom)
+
+*/
 /* BASIC VARIABLES FOR PROJECT */
 /* Colors */
 /* Fonts */
 /* Size */
-/* Grid variable */
 /* Others variable */
 /* BASIC GRID FOR PROJECT */
 .container {
@@ -405,24 +434,44 @@ th {
   src: url("../fonts/Underground.eot?#iefix") format("embedded-opentype"), url("../fonts/Underground.woff") format("woff"), url("../fonts/Underground.ttf") format("truetype"), url("../fonts/Underground.svg#Underground") format("svg");
   font-weight: normal;
   font-style: normal; }
-/* BASIC FUNCTIONS FOR PROJECT */
-/* BASIC MIXINS FOR PROJECT */
 /* BASIC STYLE */
 body {
   font-family: Underground, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  letter-spacing: 0.1; }
+  letter-spacing: 0.1;
+  color: #000000;
+  background-color: #913131; }
 
 header {
-  z-index: 100; }
+  z-index: 100;
+  background-color: #913131; }
 
 footer {
-  z-index: 90; }
+  z-index: 90;
+  background-color: #913131; }
 
 main {
   z-index: 10; }
 
-/* IMPORT HERE YOUR CUSTOM PAGES FILES */
+h1, h2, h3, h4, h5, h6 {
+  color: #000000; }
+
+img {
+  max-width: 100%; }
+
+.test {
+  -webkit-transition: all 1s;
+          transition: all 1s;
+  width: 250px;
+  height: 200px;
+  background-color: #E5AB39;
+  margin: 10% auto;
+  padding: 15px; }
+  .test h1 {
+    margin: auto;
+    text-align: center;
+    color: #913131;
+    letter-spacing: 2.6px; }
 
 /*# sourceMappingURL=main.css.map */
