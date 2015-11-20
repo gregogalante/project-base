@@ -4,7 +4,7 @@
   margin: 10% auto;
   padding: $size_container_padding;
   @include column(1/2,1/4);
-  @include pulse(1s);
+  @include growRotate(1s);
 
   h1 {
     margin: auto;

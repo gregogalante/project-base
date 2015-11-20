@@ -29,6 +29,10 @@ Di default viene l'elemento viene pressato a 0.8 della figura iniziale.
 Esegue una animazione di 'sveglia' sull'elemento.
 La durata della animazione è settata dall'unico parametro $duration.
 
+5. growRotate($duration)
+Esegue una animazione di rotazione e avanzamento sull'elemento.
+La durata della animazione è settata dall'unico parametro $duration.
+
 */
 
 // Translate animation
@@ -135,4 +139,20 @@ La durata della animazione è settata dall'unico parametro $duration.
 @keyframes buzz {
   50% {transform: translateX(3px) rotate(2deg);}
   100% {transform: translateX(-3px) rotate(-2deg);}
+}
+
+// GrowRotation animation
+@mixin growRotate($duration) {
+
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  transition-duration: $duration;
+  transition-property: transform;
+
+  &:hover, &:focus, &:active {
+    transform: scale(1.1) rotate(4deg);
+  }
 }
