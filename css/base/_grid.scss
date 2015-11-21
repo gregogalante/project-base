@@ -5,6 +5,7 @@
   margin-left: auto;
   padding-left: $size_container_padding;
   padding-right: $size_container_padding;
+  box-sizing: border-box;
   @include cf();
 }
 @media (min-width: $size_breakpoint_mobile) {
@@ -37,5 +38,6 @@
   margin-left: auto;
   padding-left: $size_container_padding;
   padding-right: $size_container_padding;
+  box-sizing: border-box;
   @include cf();
 }

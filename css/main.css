@@ -438,6 +438,7 @@ La durata della animazione è settata dall'unico parametro $duration.
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  box-sizing: border-box;
   *zoom: 1; }
   .container:before, .container:after {
     content: '';
@@ -465,6 +466,7 @@ La durata della animazione è settata dall'unico parametro $duration.
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
+  box-sizing: border-box;
   *zoom: 1; }
   .container-fluid:before, .container-fluid:after {
     content: '';
