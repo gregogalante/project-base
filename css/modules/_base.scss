@@ -24,7 +24,12 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
+  font-family: $font_title;
   color: $color_font_title;
+}
+
+a {
+  color: $color_font_link;
 }
 
 img {

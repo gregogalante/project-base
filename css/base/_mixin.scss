@@ -4,6 +4,9 @@
 
 DOCUMENTAZIONE
 
+0. working()
+Mixin utilizzato durante lo sviluppo per evidenziare l'elemento al quale viene applicato.
+
 1. opacity($opacity_value)
 Imposta l'opacità di un elemento rispetto al valore ricevuto come parametro.
 L'opacità risulta compatibile fino a IE 8.
@@ -15,7 +18,14 @@ Rende invisibile il testo contenuto dall'elemento senza però nasconderlo ai mot
 Imposta il testo in una sola riga; nel caso in cui esso esca dal contenitore, viene eliminata la parte
 in più e sostituita con tre puntini di continuazione.
 
+4. listToOneLine()
+Imposta gli elementi di una lista (al quale viene appliccato) in una singola linea.
+
 */
+
+@mixin working() {
+  background-color: rgba(red, 0.4);
+}
 
 // Opacity for IE 8
 @mixin opacity($opacity_value) {
@@ -38,4 +48,15 @@ in più e sostituita con tre puntini di continuazione.
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+
+// Set a list to a single line menu
+@mixin listToOneLine() {
+  display: block;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  li {
+    display: inline-block;
+  }
 }
