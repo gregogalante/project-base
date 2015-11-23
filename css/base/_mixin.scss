@@ -4,9 +4,6 @@
 
 DOCUMENTAZIONE
 
-0. working()
-Mixin utilizzato durante lo sviluppo per evidenziare l'elemento al quale viene applicato.
-
 1. opacity($opacity_value)
 Imposta l'opacità di un elemento rispetto al valore ricevuto come parametro.
 L'opacità risulta compatibile fino a IE 8.
@@ -22,10 +19,6 @@ in più e sostituita con tre puntini di continuazione.
 Imposta gli elementi di una lista (al quale viene appliccato) in una singola linea.
 
 */
-
-@mixin working() {
-  background-color: rgba(red, 0.4);
-}
 
 // Opacity for IE 8
 @mixin opacity($opacity_value) {

@@ -1,5 +1,12 @@
 /* BASIC STYLE */
 
+// Set box-sizing = border-box to all elements
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 body {
   font-family: $font_default, $font_base;
   font-size: $size_font;

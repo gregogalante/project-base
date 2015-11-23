@@ -25,11 +25,13 @@ $color_footer_bg: $color_primary;
 
 $font_base: sans-serif;
 $font_default: Underground;
-
 $font_title: $font_default;
 
 // ----------------------------
 /* Size */
+
+// Unit size (use it as base size)
+$size_unit: 5px;
 
 // Font size
 $size_font: 16px;
@@ -37,8 +39,8 @@ $size_line_height: 1.5;
 $size_letter_spacing: 0.1;
 
 // Container size
-$size_container_padding: 15px;
-$size_container_margin: 15px;
+$size_container_padding: 3 * $size_unit;
+$size_container_margin: 3 * $size_unit;
 
 // Brakpoint size
 $size_breakpoint_mobile: 580px;

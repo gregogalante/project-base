@@ -359,9 +359,6 @@ th {
 
 DOCUMENTAZIONE
 
-0. working()
-Mixin utilizzato durante lo sviluppo per evidenziare l'elemento al quale viene applicato.
-
 1. opacity($opacity_value)
 Imposta l'opacità di un elemento rispetto al valore ricevuto come parametro.
 L'opacità risulta compatibile fino a IE 8.
@@ -434,6 +431,7 @@ La durata della animazione è settata dall'unico parametro $duration.
 /* Others variable */
 /* BASIC GRID FOR PROJECT */
 .container {
+  position: relative;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -462,6 +460,7 @@ La durata della animazione è settata dall'unico parametro $duration.
   .container {
     width: 1155px; } }
 .container-fluid {
+  position: relative;
   margin-right: auto;
   margin-left: auto;
   padding-left: 15px;
@@ -481,6 +480,11 @@ La durata della animazione è settata dall'unico parametro $duration.
   font-weight: normal;
   font-style: normal; }
 /* BASIC STYLE */
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   font-family: Underground, sans-serif;
   font-size: 16px;

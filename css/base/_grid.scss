@@ -1,6 +1,7 @@
 /* BASIC GRID FOR PROJECT */
 
 .container {
+  position: relative;
   margin-right: auto;
   margin-left: auto;
   padding-left: $size_container_padding;
@@ -34,6 +35,7 @@
   }
 }
 .container-fluid {
+  position: relative;
   margin-right: auto;
   margin-left: auto;
   padding-left: $size_container_padding;
