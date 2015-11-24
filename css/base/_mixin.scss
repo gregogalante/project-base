@@ -20,6 +20,14 @@ Imposta gli elementi di una lista (al quale viene appliccato) in una singola lin
 
 */
 
+// Media query
+@mixin maxw($max-width) {
+  @media (max-width: $max-width) { @content; }
+}
+@mixin minw($min-width) {
+  @media (min-width: $min-width) { @content; }
+}
+
 // Opacity for IE 8
 @mixin opacity($opacity_value) {
   opacity: $opacity_value;

@@ -4,42 +4,42 @@
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  padding-left: $size_container_padding;
-  padding-right: $size_container_padding;
+  padding-left: $container_padding;
+  padding-right: $container_padding;
   box-sizing: border-box;
   @include cf();
 }
-@media (min-width: $size_breakpoint_mobile) {
+@media (min-width: $breakpoint_mobile) {
   .container {
-    width: $size_breakpoint_mobile - $size_container_margin;
+    width: $breakpoint_mobile - $container_margin;
   }
 }
-@media (min-width: $size_breakpoint_tablet_sm) {
+@media (min-width: $breakpoint_tablet_sm) {
   .container {
-    width: $size_breakpoint_tablet_sm - $size_container_margin;
+    width: $breakpoint_tablet_sm - $container_margin;
   }
 }
-@media (min-width: $size_breakpoint_tablet_md) {
+@media (min-width: $breakpoint_tablet_md) {
   .container {
-    width: $size_breakpoint_tablet_md - $size_container_margin;
+    width: $breakpoint_tablet_md - $container_margin;
   }
 }
-@media (min-width: $size_breakpoint_tablet_lg) {
+@media (min-width: $breakpoint_tablet_lg) {
   .container {
-    width: $size_breakpoint_tablet_lg - $size_container_margin;
+    width: $breakpoint_tablet_lg - $container_margin;
   }
 }
-@media (min-width: $size_breakpoint_desktop) {
+@media (min-width: $breakpoint_desktop) {
   .container {
-    width: $size_breakpoint_desktop - 15px;
+    width: $breakpoint_desktop - 15px;
   }
 }
 .container-fluid {
   position: relative;
   margin-right: auto;
   margin-left: auto;
-  padding-left: $size_container_padding;
-  padding-right: $size_container_padding;
+  padding-left: $container_padding;
+  padding-right: $container_padding;
   box-sizing: border-box;
   @include cf();
 }

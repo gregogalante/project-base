@@ -39,15 +39,15 @@ $size_line_height: 1.5;
 $size_letter_spacing: 0.1;
 
 // Container size
-$size_container_padding: 3 * $size_unit;
-$size_container_margin: 3 * $size_unit;
+$container_padding: 3 * $size_unit;
+$container_margin: 3 * $size_unit;
 
 // Brakpoint size
-$size_breakpoint_mobile: 580px;
-$size_breakpoint_tablet_sm: 768px;
-$size_breakpoint_tablet_md: 992px;
-$size_breakpoint_tablet_lg: 1024px;
-$size_breakpoint_desktop: 1170px;
+$breakpoint_mobile: 580px;
+$breakpoint_tablet_sm: 768px;
+$breakpoint_tablet_md: 992px;
+$breakpoint_tablet_lg: 1024px;
+$breakpoint_desktop: 1170px;
 
 // ----------------------------
 /* Others variable */
