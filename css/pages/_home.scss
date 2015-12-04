@@ -2,9 +2,9 @@
 .test {
   background-color: $color_secondary;
   margin: 10% auto;
-  padding: $size_container_padding;
+  padding: $container_padding;
   @include column(1/2,1/4);
-  @include growRotate(1s);
+  @include perspectiveDown(3s);
 
   h1 {
     margin: auto;

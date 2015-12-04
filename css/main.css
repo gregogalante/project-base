@@ -379,18 +379,21 @@ Imposta gli elementi di una lista (al quale viene appliccato) in una singola lin
 
 DOCUMENTAZIONE
 
+Nota Bene: tutte le animazioni con * hanno il corrispettivo keyframe-animation utilizzabile
+           singolarmente al click
+
 1. translate($translate_value, $translate_direction, $duration)
 Esegue una traslazione dell'elemento.
 La distanza della traslazione è impostata attraverso $translate_value; la direzione in cui
 la traslazione deve avvenire è indicata attraverso $translate_direction (il quale può assumere
 valore right, left, top, bottom); la durata dell'animazione è indicata attraverso $duration.
 
-2. pulse($duration)
+2. pulse($duration) *
 Esegue una pulsazione dell'elemento.
 La durata della animazione è settata dall'unico parametro $duration.
 Di default viene utilizzato un range compreso tra 1.1 e 0.9 della figura iniziale.
 
-3. push($duration)
+3. push($duration) *
 Esegue una animazione di click sull'elemento.
 La durata della animazione è settata dall'unico parametro $duration.
 Di default viene l'elemento viene pressato a 0.8 della figura iniziale.
@@ -400,13 +403,16 @@ Esegue una animazione di click sull'elemento.
 La durata della animazione è settata dall'unico parametro $duration.
 Di default viene l'elemento viene pressato a 0.8 della figura iniziale.
 
-4. buzz($duration)
+4. buzz($duration) *
 Esegue una animazione di 'sveglia' sull'elemento.
 La durata della animazione è settata dall'unico parametro $duration.
 
 5. growRotate($duration)
 Esegue una animazione di rotazione e avanzamento sull'elemento.
 La durata della animazione è settata dall'unico parametro $duration.
+
+6. perspectiveDown($duration) *
+Esegue una animazione di 'caduta' verso il basso dell'elemento.
 
 */
 @keyframes pulse {
@@ -424,6 +430,13 @@ La durata della animazione è settata dall'unico parametro $duration.
     transform: translateX(3px) rotate(2deg); }
   100% {
     transform: translateX(-3px) rotate(-2deg); } }
+@keyframes perspectiveDown {
+  0% {
+    transform-origin: 0 100%;
+    transform: perspective(800px) rotateX(0deg); }
+  100% {
+    transform-origin: 0 100%;
+    transform: perspective(800px) rotateX(-180deg); } }
 /* BASIC VARIABLES FOR PROJECT */
 /* Colors */
 /* Fonts */
@@ -525,15 +538,12 @@ img {
   margin-right: 3%;
   display: inline-block;
   vertical-align: middle;
-  transform: translateZ(0);
-  box-shadow: 0 0 1px transparent;
-  backface-visibility: hidden;
-  transition-duration: 1s;
-  transition-property: transform; }
+  backface-visibility: hidden; }
   .test:last-child {
     margin-right: 0; }
-  .test:hover, .test:focus, .test:active {
-    transform: scale(1.1) rotate(4deg); }
+  .test:hover {
+    animation-name: perspectiveDown;
+    animation-duration: 3s; }
   .test h1 {
     margin: auto;
     text-align: center;
