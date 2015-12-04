@@ -18,6 +18,12 @@ in più e sostituita con tre puntini di continuazione.
 4. listToOneLine()
 Imposta gli elementi di una lista (al quale viene appliccato) in una singola linea.
 
+5. centerElement($xy)
+Imposta un elemento al centro rispetto al contenitore. Il parametro indica come centrare l'elemento:
+- x: centra l'elemento orizzontalmente
+- y: centra l'elemento verticalmente
+- xy: centra l'elemento orizzontalmente e verticalmente
+
 */
 
 // Media query
@@ -59,5 +65,28 @@ Imposta gli elementi di una lista (al quale viene appliccato) in una singola lin
   margin: 0;
   li {
     display: inline-block;
+  }
+}
+
+// Center an element (need position: relative to the container)
+@mixin centerElement($xy) {
+  position: absolute;
+
+  @if $xy == xy {
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translate(-50%, -50%);
+  }
+  @else if $xy == x {
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+  }
+  @else if $xy == y {
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%);
   }
 }

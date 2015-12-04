@@ -47,16 +47,16 @@ Esegue una animazione di 'caduta' verso il basso dell'elemento.
   transition: transform $duration;
 
   &:hover {
-    @if $translate_direction == 'top' {
+    @if $translate_direction == top {
       transform: translateY(- $translate_value);
     }
-    @if $translate_direction == 'left' {
+    @if $translate_direction == left {
       transform: translateX(- $translate_value);
     }
-    @if $translate_direction == 'bottom' {
+    @if $translate_direction == bottom {
       transform: translateY($translate_value);
     }
-    @if $translate_direction == 'right' {
+    @if $translate_direction == right {
       transform: translateX($translate_value);
     }
     transition-property: -webkit-transform, opacity;
