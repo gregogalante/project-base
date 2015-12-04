@@ -50,13 +50,13 @@ Esegue una animazione di 'caduta' verso il basso dell'elemento.
     @if $translate_direction == top {
       transform: translateY(- $translate_value);
     }
-    @if $translate_direction == left {
+    @else if $translate_direction == left {
       transform: translateX(- $translate_value);
     }
-    @if $translate_direction == bottom {
+    @else if $translate_direction == bottom {
       transform: translateY($translate_value);
     }
-    @if $translate_direction == right {
+    @else if $translate_direction == right {
       transform: translateX($translate_value);
     }
     transition-property: -webkit-transform, opacity;

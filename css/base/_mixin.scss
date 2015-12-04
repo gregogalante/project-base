@@ -24,6 +24,9 @@ Imposta un elemento al centro rispetto al contenitore. Il parametro indica come 
 - y: centra l'elemento verticalmente
 - xy: centra l'elemento orizzontalmente e verticalmente
 
+6. horizontalGradientBg($start_color, $end_color)
+Imposta lo sfondo con un gradiente che utilizza i colori ricevuti come parametro
+
 */
 
 // Media query
@@ -71,7 +74,6 @@ Imposta un elemento al centro rispetto al contenitore. Il parametro indica come 
 // Center an element (need position: relative to the container)
 @mixin centerElement($xy) {
   position: absolute;
-
   @if $xy == xy {
     left: 50%;
     top: 50%;
@@ -89,4 +91,12 @@ Imposta un elemento al centro rispetto al contenitore. Il parametro indica come 
     bottom: auto;
     transform: translateY(-50%);
   }
+}
+
+// Get an horizontal gradient background
+@mixin horizontalGradientBg($start_color, $end_color) {
+  background-color: $start_color;
+  background-image: -webkit-gradient(linear, left top, right top, from($start_color), to($end_color));
+  background-image: linear-gradient(left, $start_color, $end_color);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$start_color}', endColorStr='#{$end_color}', gradientType='1');
 }

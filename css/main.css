@@ -379,6 +379,9 @@ Imposta un elemento al centro rispetto al contenitore. Il parametro indica come 
 - y: centra l'elemento verticalmente
 - xy: centra l'elemento orizzontalmente e verticalmente
 
+6. horizontalGradientBg($start_color, $end_color)
+Imposta lo sfondo con un gradiente che utilizza i colori ricevuti come parametro
+
 */
 /* BASIC ANIMATIONS FOR PROJECT */
 /*
