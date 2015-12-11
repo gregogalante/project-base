@@ -379,8 +379,13 @@ Imposta un elemento al centro rispetto al contenitore. Il parametro indica come 
 - y: centra l'elemento verticalmente
 - xy: centra l'elemento orizzontalmente e verticalmente
 
-6. horizontalGradientBg($start_color, $end_color)
-Imposta lo sfondo con un gradiente che utilizza i colori ricevuti come parametro
+6. gradientBanckground($start_color, $end_color, $orientation)
+Imposta lo sfondo con un gradiente che utilizza i colori ricevuti come parametro.
+La direzione del gradiente è impostata dal terzo parametro che può essere vertical, horizontal, radial.
+
+7. triangle($direction, $size, $color)
+Imposta l'elemento come un triangolo da utilizzare  greficamente.
+L'elemento deve essere posizionato in un contenitore con position: relative.
 
 */
 /* BASIC ANIMATIONS FOR PROJECT */
@@ -389,7 +394,7 @@ Imposta lo sfondo con un gradiente che utilizza i colori ricevuti come parametro
 DOCUMENTAZIONE
 
 Nota Bene: tutte le animazioni con * hanno il corrispettivo keyframe-animation utilizzabile
-           singolarmente al click
+           singolarmente al click tramite js
 
 1. translate($translate_value, $translate_direction, $duration)
 Esegue una traslazione dell'elemento.
