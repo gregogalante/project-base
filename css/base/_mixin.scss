@@ -32,6 +32,13 @@ La direzione del gradiente è impostata dal terzo parametro che può essere vert
 Imposta l'elemento come un triangolo da utilizzare  greficamente.
 L'elemento deve essere posizionato in un contenitore con position: relative.
 
+8. placeholder {content}
+Permette di definire lo stile dei placeholder degli input
+
+9. scrollbars($size, $foreground-color, $background-color)
+Permette di definire dimensione e colodi bella barra di scorrimento della pagina (non compatibile con
+tutti i browser)
+
 */
 
 // Media query
@@ -139,5 +146,33 @@ L'elemento deve essere posizionato in un contenitore con position: relative.
     border-top: 1/2*$size solid transparent;
     border-bottom: 1/2*$size solid transparent;
     border-left: $size solid $color;
+  }
+}
+
+// Set CSS Style for placeholder
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+}
+
+// Mixin to customize scrollbars
+@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
+  // For Google Chrome
+  ::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+  }
+  ::-webkit-scrollbar-thumb {
+      background: $foreground-color;
+  }
+  ::-webkit-scrollbar-track {
+      background: $background-color;
+  }
+  // For Internet Explorer
+  body {
+    scrollbar-face-color: $foreground-color;
+    scrollbar-track-color: $background-color;
   }
 }

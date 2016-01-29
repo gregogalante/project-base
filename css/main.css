@@ -387,6 +387,13 @@ La direzione del gradiente è impostata dal terzo parametro che può essere vert
 Imposta l'elemento come un triangolo da utilizzare  greficamente.
 L'elemento deve essere posizionato in un contenitore con position: relative.
 
+8. placeholder {content}
+Permette di definire lo stile dei placeholder degli input
+
+9. scrollbars($size, $foreground-color, $background-color)
+Permette di definire dimensione e colodi bella barra di scorrimento della pagina (non compatibile con
+tutti i browser)
+
 */
 /* BASIC ANIMATIONS FOR PROJECT */
 /*
