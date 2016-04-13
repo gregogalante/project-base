@@ -39,6 +39,10 @@ Permette di definire lo stile dei placeholder degli input
 Permette di definire dimensione e colodi bella barra di scorrimento della pagina (non compatibile con
 tutti i browser)
 
+10. prepareBeAfElement($content, $width, $height, $color)
+Prepara un elemento :before o :after per essere usato come elemento grafico della pagina.
+Per un corretto utilizzo l'elemento padre deve avere il position: relative.
+
 */
 
 // Media query
@@ -175,4 +179,13 @@ tutti i browser)
     scrollbar-face-color: $foreground-color;
     scrollbar-track-color: $background-color;
   }
+}
+
+// Set before/after element ready to be used as graphic element
+@mixin prepareBeAfElement($content: '', $width: 1px, $height: 1px, $color: #fff) {
+  content: $content;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background: $color;
 }
