@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url(vendor/*.css);
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -515,3 +516,6 @@ img {
     text-align: center;
     color: #16a085;
     letter-spacing: 0.12em; }
+
+#test {
+  color: black; }

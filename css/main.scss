@@ -1,4 +1,7 @@
+@import 'vendor/*.css';
+
 @import 'base/base';
-@import 'vendor/vendor';
 @import 'modules/modules';
 @import 'pages/pages';
+
+@import 'custom.scss';
