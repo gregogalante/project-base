@@ -1,6 +1,6 @@
 var gulp = require('gulp')
 
-// Dependencies
+// Dependencies gulp plugin
 var sass = require('gulp-sass')
 var concat = require('gulp-concat')
 
@@ -9,7 +9,7 @@ gulp.task('default', function () {
   console.log('Welcome to project base')
   // Watch sass files ** gulp-sass
   gulp.watch('./css/**/*.scss', ['sass'])
-  // Watch js files ** gulp-concat
+  // Watch js files ** gulp-concat and gulp-babel
   gulp.watch('./js/**/*.js', ['concat'])
 })
 
@@ -24,5 +24,5 @@ gulp.task('sass', function () {
 gulp.task('concat', function () {
   return gulp.src(['./js/vendor/*.js', './js/plugins.js', './js/custom.js'])
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('./js'))
+    .pipe(gulp.dest('./js/'))
 })
