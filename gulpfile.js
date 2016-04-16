@@ -21,7 +21,7 @@ gulp.task('default', function () {
 // CSS tasks
 gulp.task('css', function () {
   return gulp.src('./css/main.scss')
-    .pipe(sass({outputStyle: 'uncompressed'}).on('error', sass.logError))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest('./css'))
 })
