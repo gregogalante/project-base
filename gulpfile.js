@@ -3,7 +3,7 @@ var gulp = require('gulp')
 // Dependencies gulp plugin
 var sass = require('gulp-sass')
 var concat = require('gulp-concat')
-// var babel = require('gulp-babel')
+var babel = require('gulp-babel')
 var autoprefixer = require('gulp-autoprefixer')
 
 // Other dependencies
@@ -29,8 +29,8 @@ gulp.task('css', function () {
 // JS tasks
 gulp.task('js', function () {
   return gulp.src(['./js/vendor/*.js', './js/plugins.js', './js/custom.js'])
+    .pipe(babel())
     .pipe(concat('main.js'))
-    // .pipe(babel())
     .pipe(gulp.dest('./js'))
 })
 
