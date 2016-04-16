@@ -462,8 +462,6 @@ Per un corretto utilizzo l'elemento padre deve avere il position: relative.
 
 /* BASIC STYLE */
 *, *:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 body {
@@ -509,7 +507,8 @@ img {
   top: 50%;
   bottom: auto;
   right: auto;
-  transform: translate(-50%, -50%); }
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
   .test h1 {
     margin: auto;
     text-align: center;

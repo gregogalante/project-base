@@ -3,26 +3,49 @@ var gulp = require('gulp')
 // Dependencies gulp plugin
 var sass = require('gulp-sass')
 var concat = require('gulp-concat')
+// var babel = require('gulp-babel')
+var autoprefixer = require('gulp-autoprefixer')
+
+// Other dependencies
+var sassdoc = require('sassdoc')
 
 // Deafult task
 gulp.task('default', function () {
   console.log('Welcome to project base')
-  // Watch sass files ** gulp-sass
-  gulp.watch('./css/**/*.scss', ['sass'])
-  // Watch js files ** gulp-concat and gulp-babel
-  gulp.watch('./js/**/*.js', ['concat'])
+  // Watch sass files **
+  gulp.watch('./css/**/*.scss', ['css'])
+  // Watch js files **
+  gulp.watch('./js/**/*.js', ['js'])
 })
 
-// Sass tasks
-gulp.task('sass', function () {
+// CSS tasks
+gulp.task('css', function () {
   return gulp.src('./css/main.scss')
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({outputStyle: 'uncompressed'}).on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(gulp.dest('./css'))
 })
 
-// Concat tasks
-gulp.task('concat', function () {
+// JS tasks
+gulp.task('js', function () {
   return gulp.src(['./js/vendor/*.js', './js/plugins.js', './js/custom.js'])
     .pipe(concat('main.js'))
-    .pipe(gulp.dest('./js/'))
+    // .pipe(babel())
+    .pipe(gulp.dest('./js'))
+})
+
+// DOC tasks
+gulp.task('doc', function () {
+  var options = {
+    dest: 'docs',
+    verbose: true,
+    display: {
+      access: ['public', 'private'],
+      alias: true,
+      watermark: true
+    }
+  }
+
+  return gulp.src('./css/main.scss')
+    .pipe(sassdoc(options))
 })
