@@ -11,5 +11,5 @@ gulp
 
 ## Vendor management
 
-Puts css vendor files on */css/vendor*.
+Puts css vendor files on */css/vendor* and import them from vendor.scss.
 Puts js vendor files on */js/vendor*.
