@@ -24,7 +24,7 @@ Imposta un elemento al centro rispetto al contenitore. Il parametro indica come 
 - y: centra l'elemento verticalmente
 - xy: centra l'elemento orizzontalmente e verticalmente
 
-6. gradientBanckground($start_color, $end_color, $orientation)
+6. gradientBackground($start_color, $end_color, $orientation)
 Imposta lo sfondo con un gradiente che utilizza i colori ricevuti come parametro.
 La direzione del gradiente è impostata dal terzo parametro che può essere vertical, horizontal, radial.
 
@@ -110,7 +110,7 @@ Per un corretto utilizzo l'elemento padre deve avere il position: relative.
 }
 
 // Get a gradient background
-@mixin gradientBanckground($start_color, $end_color, $orientation) {
+@mixin gradientBackground($start_color, $end_color, $orientation) {
     background: $start_color;
 
     @if $orientation == vertical {
