@@ -43,6 +43,9 @@ tutti i browser)
 Prepara un elemento :before o :after per essere usato come elemento grafico della pagina.
 Per un corretto utilizzo l'elemento padre deve avere il position: relative.
 
+11. squareElement($size)
+Setta l'altezza e larghezza dell'elemento con la dimensione ricevuta come parametro.
+
 */
 
 // Media query
@@ -188,4 +191,10 @@ Per un corretto utilizzo l'elemento padre deve avere il position: relative.
   width: $width;
   height: $height;
   background: $color;
+}
+
+// Square element
+@mixin squareElement($size: 1px) {
+  width: $size;
+  height: $size;
 }
