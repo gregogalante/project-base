@@ -31,7 +31,9 @@ gulp.task('default', function () {
 // CSS tasks
 gulp.task('css', function () {
   return gulp.src('./src/css/main.scss')
+  // Exec sass files
   .pipe(css_sass({outputStyle: 'compressed'}).on('error', css_sass.logError))
+  // Add prefix to css
   .pipe(css_autoprefixer())
   .pipe(gulp.dest('./src/css'))
 })
@@ -46,7 +48,7 @@ gulp.task('js', function () {
   .pipe(js_concat('main.js'))
   // Exec babel
   .pipe(js_babel({
-    presets: ['es2015', 'react']
+    presets: ['es2015']
   }))
   .pipe(gulp.dest('./src/js'))
 })
