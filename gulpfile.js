@@ -12,15 +12,15 @@ var css_autoprefixer = require('gulp-autoprefixer')
 // Dependencies gulp plugin js
 var js_concat = require('gulp-concat')
 var js_babel = require('gulp-babel')
-var js_uglify = require('gulp-uglify');
+var js_uglify = require('gulp-uglify')
 
 // Dependencies gulp plugin images
-var img_imagemin = require('gulp-imagemin');
-var img_cache = require('gulp-cache');
+var img_imagemin = require('gulp-imagemin')
+var img_cache = require('gulp-cache')
 
 // Others
-var browserSync = require('browser-sync').create();
-var merge = require('merge-stream');
+var browserSync = require('browser-sync').create()
+var merge = require('merge-stream')
 
 // @@ GULPFILE Tasks
 // @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
