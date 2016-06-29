@@ -46,6 +46,9 @@ Per un corretto utilizzo l'elemento padre deve avere il position: relative.
 11. squareElement($size)
 Setta l'altezza e larghezza dell'elemento con la dimensione ricevuta come parametro.
 
+12. bgElement()
+Imposta un elemento come contenitore di una immagine di background.
+
 */
 
 // Media query
@@ -197,4 +200,11 @@ Setta l'altezza e larghezza dell'elemento con la dimensione ricevuta come parame
 @mixin squareElement($size: 1px) {
   width: $size;
   height: $size;
+}
+
+// Background element
+@mixin bgElement() {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
