@@ -30,14 +30,14 @@ gulp.task('default', function () {
   console.log('Welcome to project base')
   // Init browserify
   browserSync.init({
-        server: "./src"
-    });
+    server: './src'
+  })
   // Watch sass files **
   gulp.watch('./src/css/**/*', ['css'])
   // Watch js files **
   gulp.watch('./src/js/**/*', ['js'])
   // Watch everything for autoreload
-  gulp.watch("./src/**/*").on('change', browserSync.reload);
+  gulp.watch('./src/**/*').on('change', browserSync.reload)
 })
 
 // @@ GULPFILE CSS-Tasks
@@ -68,7 +68,6 @@ gulp.task('js', function () {
 
 gulp.task('build', ['build_css', 'build_js', 'build_img', 'build_copy'])
 
-
 // CSS tasks
 gulp.task('build_css', function () {
   return gulp.src('./src/css/main.scss')
@@ -89,7 +88,7 @@ gulp.task('build_js', function () {
 })
 
 // IMG tasks
-gulp.task('build_img', function() {
+gulp.task('build_img', function () {
   return gulp.src('src/images/**/*')
     .pipe(img_cache(img_imagemin({ optimizationLevel: 5, progressive: true, interlaced: true })))
     .pipe(gulp.dest('build/images'))
@@ -103,5 +102,5 @@ gulp.task('build_copy', function () {
     .pipe(gulp.dest('./build/fonts'))
   var icons = gulp.src('./src/icons/**/*')
     .pipe(gulp.dest('./build/icons'))
-  return merge(files, fonts, icons);
+  return merge(files, fonts, icons)
 })
