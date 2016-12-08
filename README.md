@@ -8,6 +8,7 @@ A simple boilerplate for static websites.
 npm install
 gulp
 ```
+
 ## Production
 
 ```console
