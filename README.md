@@ -1,6 +1,6 @@
 # Project base
 
-A simple boilerplate for static websites.
+A simple Website template boilerplate based on HTML5 Boilerplate with Gulp tasks manager.
 
 ## Configuration
 
