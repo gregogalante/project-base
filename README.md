@@ -2,14 +2,21 @@
 
 A simple Website template boilerplate based on HTML5 Boilerplate with Gulp tasks manager.
 
-## Configuration
+## Commands
+
+1. Configuration
 
 ```console
-npm install
+yarn install
+```
+
+2. Development
+
+```console
 gulp
 ```
 
-## Production
+3. Production
 
 ```console
 gulp build
