@@ -1,69 +1,11 @@
 /* BASIC MIXINS FOR PROJECT */
 
-/*
-
-DOCUMENTAZIONE
-
-1. opacity($opacity_value)
-Imposta l'opacità di un elemento rispetto al valore ricevuto come parametro.
-L'opacità risulta compatibile fino a IE 8.
-
-2. hideText()
-Rende invisibile il testo contenuto dall'elemento senza però nasconderlo ai motori di ricerca.
-
-3. oneLineText()
-Imposta il testo in una sola riga; nel caso in cui esso esca dal contenitore, viene eliminata la parte
-in più e sostituita con tre puntini di continuazione.
-
-4. listToOneLine()
-Imposta gli elementi di una lista (al quale viene appliccato) in una singola linea.
-
-5. centerElement($xy)
-Imposta un elemento al centro rispetto al contenitore. Il parametro indica come centrare l'elemento:
-- x: centra l'elemento orizzontalmente
-- y: centra l'elemento verticalmente
-- xy: centra l'elemento orizzontalmente e verticalmente
-
-6. gradientBackground($start_color, $end_color, $orientation)
-Imposta lo sfondo con un gradiente che utilizza i colori ricevuti come parametro.
-La direzione del gradiente è impostata dal terzo parametro che può essere vertical, horizontal, radial.
-
-7. triangle($direction, $size, $color)
-Imposta l'elemento come un triangolo da utilizzare  greficamente.
-L'elemento deve essere posizionato in un contenitore con position: relative.
-
-8. placeholder {content}
-Permette di definire lo stile dei placeholder degli input
-
-9. scrollbars($size, $foreground-color, $background-color)
-Permette di definire dimensione e colodi bella barra di scorrimento della pagina (non compatibile con
-tutti i browser)
-
-10. prepareBeAfElement($content, $width, $height, $color)
-Prepara un elemento :before o :after per essere usato come elemento grafico della pagina.
-Per un corretto utilizzo l'elemento padre deve avere il position: relative.
-
-11. squareElement($size)
-Setta l'altezza e larghezza dell'elemento con la dimensione ricevuta come parametro.
-
-12. bgElement()
-Imposta un elemento come contenitore di una immagine di background.
-
-*/
-
 // Media query
 @mixin maxw($max-width) {
   @media (max-width: $max-width) { @content; }
 }
 @mixin minw($min-width) {
   @media (min-width: $min-width) { @content; }
-}
-
-// Opacity for IE 8
-@mixin opacity($opacity_value) {
-  opacity: $opacity_value;
-  $opacity-ie: $opacity_value * 100;
-  filter: alpha(opacity=$opacity-ie); //IE8
 }
 
 // Hide text without remove it
@@ -113,98 +55,4 @@ Imposta un elemento come contenitore di una immagine di background.
     bottom: auto;
     transform: translateY(-50%);
   }
-}
-
-// Get a gradient background
-@mixin gradientBackground($start_color, $end_color, $orientation) {
-    background: $start_color;
-
-    @if $orientation == vertical {
-      background: -webkit-linear-gradient(top, $start_color, $end_color);
-      background: linear-gradient(to bottom, $start_color, $end_color);
-    } @else if $orientation == horizontal {
-      background: -webkit-linear-gradient(left, $start_color, $end_color);
-      background: linear-gradient(to right, $start_color, $end_color);
-    } @else {
-      background: -webkit-radial-gradient(center, ellipse cover, $start_color, $end_color);
-      background: radial-gradient(ellipse at center, $start_color, $end_color);
-    }
-}
-
-// Set the element as a triangle
-@mixin triangle($direction, $size, $color){
-  content: '';
-  display: block;
-  position: absolute;
-  height: 0; width: 0;
-  @if ($direction == up){
-    border-bottom: $size solid $color;
-    border-left: 1/2*$size solid transparent;
-    border-right: 1/2*$size solid transparent;
-  }
-  @else if ($direction == down){
-    border-top: $size solid $color;
-    border-left: 1/2*$size solid transparent;
-    border-right: 1/2*$size solid transparent;
-  }
-  @else if ($direction == left){
-    border-top: 1/2*$size solid transparent;
-    border-bottom: 1/2*$size solid transparent;
-    border-right: $size solid $color;
-  }
-  @else if ($direction == right){
-    border-top: 1/2*$size solid transparent;
-    border-bottom: 1/2*$size solid transparent;
-    border-left: $size solid $color;
-  }
-}
-
-// Set CSS Style for placeholder
-@mixin placeholder {
-  ::-webkit-input-placeholder {@content}
-  :-moz-placeholder           {@content}
-  ::-moz-placeholder          {@content}
-  :-ms-input-placeholder      {@content}
-}
-
-// Mixin to customize scrollbars
-@mixin scrollbars($size, $foreground-color, $background-color: mix($foreground-color, white,  50%)) {
-  // For Google Chrome
-  ::-webkit-scrollbar {
-      width:  $size;
-      height: $size;
-  }
-  ::-webkit-scrollbar-thumb {
-      background: $foreground-color;
-  }
-  ::-webkit-scrollbar-track {
-      background: $background-color;
-  }
-  // For Internet Explorer
-  body {
-    scrollbar-face-color: $foreground-color;
-    scrollbar-track-color: $background-color;
-  }
-}
-
-// Set before/after element ready to be used as graphic element
-@mixin prepareBeAfElement($content: '', $width: 1px, $height: 1px, $color: #fff) {
-  content: $content;
-  position: absolute;
-  width: $width;
-  height: $height;
-  background: $color;
-}
-
-// Square element
-@mixin squareElement($size: 1px) {
-  width: $size;
-  height: $size;
-}
-
-// Background element
-@mixin bgElement() {
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
