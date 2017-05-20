@@ -1,9 +1,9 @@
 // Project Core
-@import 'default'; // Codice CSS di reset
-@import 'mixin'; // Helper
+@import 'default'; 
+@import 'mixin';
 
 // Project Base files
-@import 'jeet/_jeet.scss'; // Framework per la griglia
-@import 'variables'; // Variabili del progetto
-@import 'grid'; // Definizione della griglia del progetto
-@import 'fonts'; // Definizione dei fonts del progetto
+@import 'jeet/_jeet.scss';
+@import 'variables';
+@import 'grid';
+@import 'fonts';

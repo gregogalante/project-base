@@ -1,11 +1,19 @@
 /* BASIC MIXINS FOR PROJECT */
 
-// Media query
 @mixin maxw($max-width) {
   @media (max-width: $max-width) { @content; }
 }
+
 @mixin minw($min-width) {
   @media (min-width: $min-width) { @content; }
+}
+
+@mixin maxh($max-height) {
+  @media (max-height: $max-height) { @content; }
+}
+
+@mixin minh($min-height) {
+  @media (min-height: $min-height) { @content; }
 }
 
 // Hide text without remove it
@@ -22,17 +30,6 @@
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-}
-
-// Set a list to a single line menu
-@mixin listToOneLine() {
-  display: block;
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-  li {
-    display: inline-block;
-  }
 }
 
 // Center an element (need position: relative to the container)

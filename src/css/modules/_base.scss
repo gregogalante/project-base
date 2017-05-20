@@ -17,17 +17,11 @@ body {
 }
 
 header {
-  z-index: $z-index_header;
   background-color: $color_header_bg;
 }
 
 footer {
-  z-index: $z-index_footer;
   background-color: $color_footer_bg;
-}
-
-main {
-  z-index: $z-index_main;
 }
 
 h1, h2, h3, h4, h5, h6 {
