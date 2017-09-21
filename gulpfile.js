@@ -48,7 +48,7 @@ gulp.task('js', function () {
   return gulp.src(['./src/js/vendor/*.js', './src/js/custom.js'])
   .pipe(jsConcat('main.js'))
   .pipe(jsBabel({
-    presets: ['es2015']
+    presets: ['env']
   }))
   .pipe(gulp.dest('./src/js'))
 })
@@ -69,7 +69,7 @@ gulp.task('build_js', function () {
   return gulp.src(['./src/js/vendor/*.js', './src/js/custom.js'])
   .pipe(jsConcat('main.js'))
   .pipe(jsBabel({
-    presets: ['es2015']
+    presets: ['env']
   }))
   .pipe(jsUglify())
   .pipe(gulp.dest('./build/js'))
