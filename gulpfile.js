@@ -1,39 +1,33 @@
-// Dependencies:
-
 var gulp = require('gulp')
-
-// Dependencies gulp plugin css
 var cssSass = require('gulp-sass')
 var cssAutoprefixer = require('gulp-autoprefixer')
-
-// Dependencies gulp plugin js
 var jsConcat = require('gulp-concat')
 var jsBabel = require('gulp-babel')
 var jsUglify = require('gulp-uglify')
-
-// Dependencies gulp plugin images
 var imgImagemin = require('gulp-imagemin')
 var imgCache = require('gulp-cache')
-
-// Others
 var browserSync = require('browser-sync').create()
 var merge = require('merge-stream')
 
-// Tasks:
+// Development tasks:
+// //////////////////////////////////////////////////////////////////
 
 // Deafult task
 gulp.task('default', function () {
   console.log('Welcome to project base')
-  // Init browserify
+
+  // init browserify
   browserSync.init({
     server: './src'
   })
-  // Watch sass files **
+
+  // watch sass files **
   gulp.watch('./src/css/**/*', ['css'])
-  // Watch js files **
+  // watch js files **
   gulp.watch('./src/js/**/*', ['js'])
-  // Watch everything for autoreload
-  gulp.watch('./src/**/*').on('change', browserSync.reload)
+
+  // watch sass files for autoreload
+  gulp.watch('./src/css/*').on('change', browserSync.reload)
 })
 
 // CSS tasks
@@ -52,6 +46,9 @@ gulp.task('js', function () {
   }))
   .pipe(gulp.dest('./src/js'))
 })
+
+// Build tasks:
+// //////////////////////////////////////////////////////////////////
 
 // Build task
 gulp.task('build', ['build_css', 'build_js', 'build_img', 'build_copy'])
@@ -82,7 +79,7 @@ gulp.task('build_img', function () {
     .pipe(gulp.dest('build/images'))
 })
 
-// Copy to build path task
+// Copy static files
 gulp.task('build_copy', function () {
   var files = gulp.src('./src/*')
     .pipe(gulp.dest('./build'))
