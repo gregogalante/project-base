@@ -16,6 +16,15 @@
   @media (min-height: $min-height) { @content; }
 }
 
+// Clearfix
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
 // Hide text without remove it
 @mixin hideText() {
   clip: rect(1px, 1px, 1px, 1px);
