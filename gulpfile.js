@@ -85,7 +85,5 @@ gulp.task('build_copy', function () {
     .pipe(gulp.dest('./build'))
   var fonts = gulp.src('./src/fonts/**/*')
     .pipe(gulp.dest('./build/fonts'))
-  var icons = gulp.src('./src/icons/**/*')
-    .pipe(gulp.dest('./build/icons'))
-  return merge(files, fonts, icons)
+  return merge(files, fonts)
 })
