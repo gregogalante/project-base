@@ -39,7 +39,7 @@ gulp.task('css', function () {
 
 // JS tasks
 gulp.task('js', function () {
-  return gulp.src(['./src/js/vendor/*.js', './src/js/custom.js'])
+  return gulp.src(['./src/js/vendor/*.js', './src/js/modules/*.js', './src/js/custom.js'])
   .pipe(jsConcat('main.js'))
   .pipe(jsBabel({
     presets: ['env']
@@ -63,7 +63,7 @@ gulp.task('build_css', function () {
 
 // Build JS tasks
 gulp.task('build_js', function () {
-  return gulp.src(['./src/js/vendor/*.js', './src/js/custom.js'])
+  return gulp.src(['./src/js/vendor/*.js', './src/js/modules/*.js', './src/js/custom.js'])
   .pipe(jsConcat('main.js'))
   .pipe(jsBabel({
     presets: ['env']
