@@ -31,7 +31,7 @@
 }
 @media (min-width: $breakpoint_desktop) {
   .container {
-    width: $breakpoint_desktop - 15px;
+    width: $breakpoint_desktop - $container_margin;
   }
 }
 .container-fluid {
