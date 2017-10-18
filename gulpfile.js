@@ -14,8 +14,6 @@ var merge = require('merge-stream')
 
 // Deafult task
 gulp.task('default', function () {
-  console.log('Welcome to project base')
-
   // init browserify
   browserSync.init({
     server: './src'
