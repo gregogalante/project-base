@@ -1,5 +1,5 @@
 {
-  "name": "project-base",
+  "name": "static-boilerplate",
   "version": "1.0.0",
   "devDependencies": {
     "babel-core": "^6.26.0",
