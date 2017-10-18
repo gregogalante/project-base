@@ -1,6 +1,6 @@
-# Project base
+# Static boilerplate
 
-A simple Website template boilerplate with Gulp tasks manager.
+A simple static website template boilerplate with Gulp tasks manager.
 
 ## Commands
 
