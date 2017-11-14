@@ -1,4 +1,5 @@
 var gulp = require('gulp')
+var rename = require('gulp-rename')
 var cssSass = require('gulp-sass')
 var cssAutoprefixer = require('gulp-autoprefixer')
 var jsConcat = require('gulp-concat')
@@ -32,16 +33,18 @@ gulp.task('default', function () {
 gulp.task('css', function () {
   return gulp.src('./src/css/main.scss')
   .pipe(cssSass().on('error', cssSass.logError))
+  .pipe(rename('main.min.css'))
   .pipe(gulp.dest('./src/css'))
 })
 
 // JS tasks
 gulp.task('js', function () {
-  return gulp.src(['./src/js/vendor/*.js', './src/js/modules/*.js', './src/js/custom.js'])
-  .pipe(jsConcat('main.js'))
+  return gulp.src(['./src/js/vendor/*.js', './src/js/modules/*.js', './src/js/main.js'])
+  .pipe(jsConcat('main_concat.js'))
   .pipe(jsBabel({
     presets: ['env']
   }))
+  .pipe(rename('main.min.js'))
   .pipe(gulp.dest('./src/js'))
 })
 
@@ -56,17 +59,19 @@ gulp.task('build_css', function () {
   return gulp.src('./src/css/main.scss')
   .pipe(cssSass({outputStyle: 'compressed'}))
   .pipe(cssAutoprefixer())
+  .pipe(rename('main.min.css'))
   .pipe(gulp.dest('./build/css'))
 })
 
 // Build JS tasks
 gulp.task('build_js', function () {
-  return gulp.src(['./src/js/vendor/*.js', './src/js/modules/*.js', './src/js/custom.js'])
-  .pipe(jsConcat('main.js'))
+  return gulp.src(['./src/js/vendor/*.js', './src/js/modules/*.js', './src/js/main.js'])
+  .pipe(jsConcat('main_concat.js'))
   .pipe(jsBabel({
     presets: ['env']
   }))
   .pipe(jsUglify())
+  .pipe(rename('main.min.js'))
   .pipe(gulp.dest('./build/js'))
 })
 

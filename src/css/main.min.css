@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -355,61 +354,10 @@ th {
   padding: 0; }
 
 /* BASIC MIXINS FOR PROJECT */
-/*
-
-DOCUMENTAZIONE
-
-1. opacity($opacity_value)
-Imposta l'opacità di un elemento rispetto al valore ricevuto come parametro.
-L'opacità risulta compatibile fino a IE 8.
-
-2. hideText()
-Rende invisibile il testo contenuto dall'elemento senza però nasconderlo ai motori di ricerca.
-
-3. oneLineText()
-Imposta il testo in una sola riga; nel caso in cui esso esca dal contenitore, viene eliminata la parte
-in più e sostituita con tre puntini di continuazione.
-
-4. listToOneLine()
-Imposta gli elementi di una lista (al quale viene appliccato) in una singola linea.
-
-5. centerElement($xy)
-Imposta un elemento al centro rispetto al contenitore. Il parametro indica come centrare l'elemento:
-- x: centra l'elemento orizzontalmente
-- y: centra l'elemento verticalmente
-- xy: centra l'elemento orizzontalmente e verticalmente
-
-6. gradientBackground($start_color, $end_color, $orientation)
-Imposta lo sfondo con un gradiente che utilizza i colori ricevuti come parametro.
-La direzione del gradiente è impostata dal terzo parametro che può essere vertical, horizontal, radial.
-
-7. triangle($direction, $size, $color)
-Imposta l'elemento come un triangolo da utilizzare  greficamente.
-L'elemento deve essere posizionato in un contenitore con position: relative.
-
-8. placeholder {content}
-Permette di definire lo stile dei placeholder degli input
-
-9. scrollbars($size, $foreground-color, $background-color)
-Permette di definire dimensione e colodi bella barra di scorrimento della pagina (non compatibile con
-tutti i browser)
-
-10. prepareBeAfElement($content, $width, $height, $color)
-Prepara un elemento :before o :after per essere usato come elemento grafico della pagina.
-Per un corretto utilizzo l'elemento padre deve avere il position: relative.
-
-11. squareElement($size)
-Setta l'altezza e larghezza dell'elemento con la dimensione ricevuta come parametro.
-
-12. bgElement()
-Imposta un elemento come contenitore di una immagine di background.
-
-*/
 /* BASIC VARIABLES FOR PROJECT */
 /* Colors */
 /* Fonts */
 /* Size */
-/* Others variable */
 /* BASIC GRID FOR PROJECT */
 .container {
   position: relative;
@@ -417,12 +365,10 @@ Imposta un elemento come contenitore di una immagine di background.
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  box-sizing: border-box;
-  *zoom: 1; }
-  .container:before, .container:after {
-    content: '';
-    display: table; }
+  box-sizing: border-box; }
   .container:after {
+    content: "";
+    display: table;
     clear: both; }
 
 @media (min-width: 580px) {
@@ -451,12 +397,10 @@ Imposta un elemento come contenitore di una immagine di background.
   margin-left: auto;
   padding-left: 15px;
   padding-right: 15px;
-  box-sizing: border-box;
-  *zoom: 1; }
-  .container-fluid:before, .container-fluid:after {
-    content: '';
-    display: table; }
+  box-sizing: border-box; }
   .container-fluid:after {
+    content: "";
+    display: table;
     clear: both; }
 
 /* BASIC FONTS FOR PROJECT */
@@ -475,21 +419,16 @@ Imposta un elemento come contenitore di una immagine di background.
 body {
   font-family: Underground, sans-serif;
   font-size: 16px;
-  line-height: 1.5;
+  line-height: 1.5em;
   letter-spacing: 0.1em;
   color: #000000;
   background-color: #293b5a; }
 
 header {
-  z-index: 100;
   background-color: #293b5a; }
 
 footer {
-  z-index: 90;
   background-color: #293b5a; }
-
-main {
-  z-index: 10; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: Underground;
@@ -507,7 +446,7 @@ img {
   width: 100%; }
 
 .test {
-  background-color: #F6F6F6;
+  background-color: #ffffff;
   padding: 15px;
   width: 500px;
   position: absolute;
