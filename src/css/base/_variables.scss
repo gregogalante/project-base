@@ -5,8 +5,6 @@
 
 $color_black: #000000;
 $color_white: #ffffff;
-
-// Default colors
 $color_primary: #293b5a;
 
 // Font colors
@@ -15,7 +13,6 @@ $color_font_title: $color_black;
 $color_font_link: $color_black;
 
 // Modules colors
-
 $color_body_bg: $color_primary;
 $color_header_bg: $color_primary;
 $color_footer_bg: $color_primary;
@@ -30,17 +27,14 @@ $font_title: $font_default;
 // ----------------------------
 /* Size */
 
-// Unit size (use it as base size for margins, padding ecc.)
-$size_unit: 5px;
-
 // Font size
 $size_font: 16px;
 $size_line_height: 1.5em;
 $size_letter_spacing: 0.1em;
 
 // Container size
-$container_padding: 3 * $size_unit;
-$container_margin: 3 * $size_unit;
+$container_padding: 15px;
+$container_margin: 15px;
 
 // Brakpoint size
 $breakpoint_mobile: 580px;

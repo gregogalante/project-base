@@ -1,8 +1,9 @@
-var Initializer = (function () {
-  // This function is used to initialize the module.
-  var init = function () {}
+const Initializer = (() => {
+
+  const init = () => {}
 
   return {
     init
   }
+
 })()
