@@ -9,3 +9,20 @@
   font-size: 70px;
   text-transform: uppercase;
 }
+
+.p-home__desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $color_secondary;
+  font-size: 30px;
+  width: calc(100% - 30px);
+  max-width: 500px;
+  margin: 0;
+
+  a {
+    color: $color_primary;
+    text-decoration: none;
+  }
+}

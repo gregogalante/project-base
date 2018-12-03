@@ -378,10 +378,10 @@ footer {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Arvo";
-  color: #000000; }
+  color: #03256C; }
 
 a {
-  color: #000000; }
+  color: #03256C; }
 
 img {
   max-width: 100%; }
@@ -780,6 +780,14 @@ img {
   .c-section__content--secondary {
     background-color: #1768AC; }
 
+.c-section__content-half {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; }
+
 .p-home__title {
   position: absolute;
   top: calc(50% - 100px);
@@ -788,3 +796,17 @@ img {
   color: #ffffff;
   font-size: 70px;
   text-transform: uppercase; }
+
+.p-home__desc {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #1768AC;
+  font-size: 30px;
+  width: calc(100% - 30px);
+  max-width: 500px;
+  margin: 0; }
+  .p-home__desc a {
+    color: #03256C;
+    text-decoration: none; }
