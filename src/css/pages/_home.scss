@@ -1,22 +1,11 @@
-// Test code.
+.p-home {}
 
-.container {
-  height: 100vh;
-  position: relative;
-  width: 100%;
-}
-
-.test {
-  background-color: $color_white;
-  padding: $container_padding;
-  width: 500px;
-  @include centerElement(xy);
-
-  h1 {
-    margin: auto;
-    text-align: center;
-    color: $color_primary;
-    letter-spacing: $size_letter_spacing * 1.2;
-  }
-
+.p-home__title {
+  position: absolute;
+  top: calc(50% - 100px);
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: $color_white;
+  font-size: 70px;
+  text-transform: uppercase;
 }

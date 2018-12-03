@@ -1,0 +1,31 @@
+.c-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  z-index: 99;
+
+  &--light {
+    .c-header__logo {
+      svg {
+        stroke: $color_white;
+    fill: $color_white;
+      }
+    }
+  }
+}
+
+.c-header__logo {
+
+  h1 {
+    @include hideText()
+  }
+
+  svg {
+    width: 60px;
+    height: 60px;
+    stroke: $color_primary;
+    fill: $color_primary;
+  }
+}

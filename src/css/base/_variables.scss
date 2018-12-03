@@ -5,7 +5,8 @@
 
 $color_black: #000000;
 $color_white: #ffffff;
-$color_primary: #293b5a;
+$color_primary: #03256C;
+$color_secondary: #1768AC;
 
 // Font colors
 $color_font: $color_black;
@@ -13,16 +14,16 @@ $color_font_title: $color_black;
 $color_font_link: $color_black;
 
 // Modules colors
-$color_body_bg: $color_primary;
-$color_header_bg: $color_primary;
+$color_body_bg: $color_white;
+$color_header_bg: transparent;
 $color_footer_bg: $color_primary;
 
 // ----------------------------
 /* Fonts */
 
-$font_base: sans-serif;
-$font_default: Underground;
-$font_title: $font_default;
+$font_base: 'Montserrat', sans-serif;
+$font_default: 'Montserrat';
+$font_title: 'Arvo';
 
 // ----------------------------
 /* Size */

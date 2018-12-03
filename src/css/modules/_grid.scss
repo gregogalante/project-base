@@ -1,0 +1,115 @@
+// Configuration
+// *********************************************************************
+
+$grid: (
+  containerWidth: $breakpoint_lg,
+  containerPaddingOrizontal: 0,
+  containerPaddingVertical: 0,
+  columns: 12,
+  space: 5px,
+  breakpoints: (
+    xs: $breakpoint_xs,
+    sm: $breakpoint_sm,
+    md: $breakpoint_md,
+    lg: $breakpoint_lg,
+    xl: $breakpoint_xl
+  )
+);
+
+// Mixins
+// *********************************************************************
+
+@mixin clearfix {
+  &:before, &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Style
+// *********************************************************************
+
+.c-grid__container, .c-grid__container-fluid {
+  padding-left: map-get($grid, 'containerPaddingOrizontal');
+  padding-right: map-get($grid, 'containerPaddingOrizontal');
+  padding-top: map-get($grid, 'containerPaddingVertical');
+  padding-bottom: map-get($grid, 'containerPaddingVertical');
+  margin: auto;
+  box-sizing: border-box;
+  width: 100%;
+
+  @include clearfix;
+}
+
+@each $name, $pixels in map-get($grid, 'breakpoints') {
+  @media screen and (min-width: $pixels) {
+    .c-grid__container {
+      max-width: $pixels;
+    }
+  }
+}
+
+.c-grid__col {
+  float: left;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+// Basic grid
+// *********************************************************************
+
+@for $i from 1 through map-get($grid, 'columns') {
+  $width: percentage(1 / (map-get($grid, 'columns') / $i));
+
+  .c-grid__col--#{$i} {
+    width: $width;
+  }
+}
+
+@each $name, $pixels in map-get($grid, 'breakpoints') {
+  @media screen and (min-width: $pixels) {
+    @for $i from 1 through map-get($grid, 'columns') {
+      $width: percentage(1 / (map-get($grid, 'columns') / $i));
+    
+      .c-grid__col--#{$name}-#{$i} {
+        width: $width;
+      }
+    }
+  }
+}
+
+// Spaced grid
+// *********************************************************************
+
+.c-grid__container--spaced, .c-grid__container-fluid--spaced {
+  padding-left: map-get($grid, 'containerPaddingOrizontal') - map-get($grid, 'space');
+  padding-right: map-get($grid, 'containerPaddingOrizontal')  - map-get($grid, 'space');
+
+  .c-grid__col {
+    margin-left: map-get($grid, 'space');
+    margin-right: map-get($grid, 'space');
+  }
+
+  @for $i from 1 through map-get($grid, 'columns') {
+    $width: percentage(1 / (map-get($grid, 'columns') / $i));
+  
+    .c-grid__col--#{$i} {
+      width: calc(#{$width} - #{map-get($grid, 'space') * 2});
+    }
+  }
+  
+  @each $name, $pixels in map-get($grid, 'breakpoints') {
+    @media screen and (min-width: $pixels) {
+      @for $i from 1 through map-get($grid, 'columns') {
+        $width: percentage(1 / (map-get($grid, 'columns') / $i));
+      
+        .c-grid__col--#{$name}-#{$i} {
+          width: calc(#{$width} - #{map-get($grid, 'space') * 2});
+        }
+      }
+    }
+  }
+}

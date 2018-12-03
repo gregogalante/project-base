@@ -1,0 +1,15 @@
+.c-section {}
+
+.c-section__content {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+
+  &--primary {
+    background-color: $color_primary;
+  }
+
+  &--secondary {
+    background-color: $color_secondary;
+  }
+}
