@@ -7,8 +7,9 @@ var jsBabel = require('gulp-babel')
 var jsUglify = require('gulp-uglify')
 var imgImagemin = require('gulp-imagemin')
 var imgCache = require('gulp-cache')
-var browserSync = require('browser-sync').create()
 var merge = require('merge-stream')
+
+var browserSync = require('browser-sync').create()
 
 // Development tasks:
 // //////////////////////////////////////////////////////////////////
@@ -42,7 +43,7 @@ gulp.task('js', function () {
   return gulp.src(['./src/js/vendor/*.js', './src/js/modules/*.js', './src/js/main.js'])
   .pipe(jsConcat('main_concat.js'))
   .pipe(jsBabel({
-    presets: ['env']
+    presets: ['@babel/env']
   }))
   .pipe(rename('main.min.js'))
   .pipe(gulp.dest('./src/js'))

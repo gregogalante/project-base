@@ -6,7 +6,7 @@
 
 body {
   font-family: $font_default, $font_base;
-  font-size: $size_font;
+  font-size: ($size_font / $size_font) * 100%;
   color: $color_font;
   background-color: $color_body_bg;
 }

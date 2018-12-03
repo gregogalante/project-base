@@ -30,13 +30,9 @@ $font_title: $font_default;
 // Font size
 $size_font: 16px;
 
-// Container size
-$container_padding: 15px;
-$container_margin: 15px;
-
 // Brakpoint size
-$breakpoint_mobile: 580px;
-$breakpoint_tablet_sm: 768px;
-$breakpoint_tablet_md: 992px;
-$breakpoint_tablet_lg: 1024px;
-$breakpoint_desktop: 1170px;
+$breakpoint_xs: 480px;
+$breakpoint_sm: 736px;
+$breakpoint_md: 980px;
+$breakpoint_lg: 1280px;
+$breakpoint_xl: 1690px;
