@@ -1,1 +1,10 @@
-.c-footer {}
+.c-footer {
+  width: 100%;
+  padding: 30px 15px;
+  color: $color_white;
+}
+
+.c-footer__legals {
+  font-size: 12px;
+  line-height: 1.5em;
+}

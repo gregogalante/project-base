@@ -6,11 +6,11 @@
   padding: 15px;
   z-index: 99;
 
-  &--light {
+  &--primary {
     .c-header__logo {
       svg {
-        stroke: $color_white;
-    fill: $color_white;
+        stroke: $color_primary;
+        fill: $color_primary;
       }
     }
   }
@@ -25,7 +25,7 @@
   svg {
     width: 60px;
     height: 60px;
-    stroke: $color_primary;
-    fill: $color_primary;
+    stroke: $color_white;
+    fill: $color_white;
   }
 }

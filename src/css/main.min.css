@@ -355,6 +355,21 @@ th {
   padding: 0; }
 
 /* BASIC MIXINS FOR PROJECT */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px); }
+  60% {
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px); } }
+
 /* BASIC VARIABLES FOR PROJECT */
 /* Colors */
 /* Fonts */
@@ -374,7 +389,7 @@ header {
   background-color: transparent; }
 
 footer {
-  background-color: #03256C; }
+  background-color: #1768AC; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Arvo";
@@ -754,9 +769,9 @@ img {
   width: 100%;
   padding: 15px;
   z-index: 99; }
-  .c-header--light .c-header__logo svg {
-    stroke: #ffffff;
-    fill: #ffffff; }
+  .c-header--primary .c-header__logo svg {
+    stroke: #03256C;
+    fill: #03256C; }
 
 .c-header__logo h1 {
   clip: rect(1px, 1px, 1px, 1px);
@@ -768,8 +783,17 @@ img {
 .c-header__logo svg {
   width: 60px;
   height: 60px;
-  stroke: #03256C;
-  fill: #03256C; }
+  stroke: #ffffff;
+  fill: #ffffff; }
+
+.c-footer {
+  width: 100%;
+  padding: 30px 15px;
+  color: #ffffff; }
+
+.c-footer__legals {
+  font-size: 12px;
+  line-height: 1.5em; }
 
 .c-section__content {
   position: relative;
@@ -788,25 +812,131 @@ img {
   background-position: center;
   background-repeat: no-repeat; }
 
-.p-home__title {
-  position: absolute;
-  top: calc(50% - 100px);
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #ffffff;
-  font-size: 70px;
-  text-transform: uppercase; }
+.c-form__input {
+  margin-bottom: 15px; }
+  .c-form__input label {
+    color: #ffffff;
+    font-size: 14px;
+    font-family: "Arvo"; }
+  .c-form__input input, .c-form__input textarea {
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    border: solid 1px #ffffff;
+    outline: 0;
+    color: #ffffff;
+    padding: 15px 10px;
+    margin-top: 2px; }
+  .c-form__input textarea {
+    height: 160px; }
 
-.p-home__desc {
+.c-form__actions {
+  text-align: right; }
+
+.c-button {
+  background-color: #ffffff;
+  color: #03256C;
+  border: none;
+  outline: none;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+.p-home__absolute {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: calc(100% - 100px); }
+
+.p-home__absolute--cenered {
+  max-width: 400px; }
+
+.p-home__title {
+  margin: 0;
+  color: #ffffff;
+  font-size: 70px;
+  text-transform: uppercase; }
+
+.p-home__subtitle {
+  margin: 0;
+  color: #ffffff;
+  font-size: 50px;
+  margin-bottom: 20px;
+  padding-bottom: 5px; }
+  .p-home__subtitle--primary {
+    color: #03256C; }
+
+.p-home__desc {
   color: #1768AC;
   font-size: 30px;
-  width: calc(100% - 30px);
-  max-width: 500px;
   margin: 0; }
   .p-home__desc a {
     color: #03256C;
     text-decoration: none; }
+  .p-home__desc b {
+    color: #03256C; }
+
+.p-home__scroll {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center; }
+  .p-home__scroll span {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 12px;
+    color: #ffffff; }
+  .p-home__scroll svg {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    fill: #ffffff;
+    stroke: #ffffff;
+    animation: bounce 2s infinite; }
+
+.p-home__services-navigation {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 30px;
+  color: #1768AC;
+  text-align: right; }
+  .p-home__services-navigation li {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #f0f0f0;
+    cursor: pointer; }
+    .p-home__services-navigation li:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none; }
+    .p-home__services-navigation li.is-active {
+      color: #03256C; }
+
+.p-home__services-contents {
+  overflow: hidden; }
+  .p-home__services-contents .flickity-slider {
+    transform: none !important; }
+
+.p-home__services-content {
+  text-align: left;
+  width: 100%;
+  left: 0 !important;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1; }
+  .p-home__services-content h3 {
+    font-size: 40px;
+    color: #ffffff;
+    margin: 0;
+    margin-bottom: 30px; }
+  .p-home__services-content p {
+    color: #ffffff;
+    line-height: 1.5em;
+    font-size: 24px;
+    margin: 0; }
+  .p-home__services-content.is-selected {
+    opacity: 1;
+    z-index: 0; }

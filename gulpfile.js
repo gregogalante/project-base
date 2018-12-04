@@ -11,6 +11,18 @@ var merge = require('merge-stream')
 
 var browserSync = require('browser-sync').create()
 
+var jsSources = [
+  './node_modules/flickity/dist/flickity.pkgd.min.js',
+  './src/js/vendor/*.js',
+  './src/js/modules/*.js',
+  './src/js/main.js'
+]
+
+var cssSources = [
+  './node_modules/flickity/dist/flickity.min.css',
+  './src/css/main.scss'
+]
+
 // Development tasks:
 // //////////////////////////////////////////////////////////////////
 
@@ -32,7 +44,7 @@ gulp.task('default', function () {
 
 // CSS tasks
 gulp.task('css', function () {
-  return gulp.src('./src/css/main.scss')
+  return gulp.src(cssSources)
   .pipe(cssSass().on('error', cssSass.logError))
   .pipe(rename('main.min.css'))
   .pipe(gulp.dest('./src/css'))
@@ -40,7 +52,7 @@ gulp.task('css', function () {
 
 // JS tasks
 gulp.task('js', function () {
-  return gulp.src(['./src/js/vendor/*.js', './src/js/modules/*.js', './src/js/main.js'])
+  return gulp.src(jsSources)
   .pipe(jsConcat('main_concat.js'))
   .pipe(jsBabel({
     presets: ['@babel/env']
@@ -57,7 +69,7 @@ gulp.task('build', ['build_css', 'build_js', 'build_img', 'build_copy'])
 
 // Build CSS tasks
 gulp.task('build_css', function () {
-  return gulp.src('./src/css/main.scss')
+  return gulp.src(cssSources)
   .pipe(cssSass({outputStyle: 'compressed'}))
   .pipe(cssAutoprefixer())
   .pipe(rename('main.min.css'))
@@ -66,7 +78,7 @@ gulp.task('build_css', function () {
 
 // Build JS tasks
 gulp.task('build_js', function () {
-  return gulp.src(['./src/js/vendor/*.js', './src/js/modules/*.js', './src/js/main.js'])
+  return gulp.src(jsSources)
   .pipe(jsConcat('main_concat.js'))
   .pipe(jsBabel({
     presets: ['env']

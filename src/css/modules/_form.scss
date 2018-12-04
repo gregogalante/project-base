@@ -1,0 +1,32 @@
+.c-form {
+
+}
+
+.c-form__input {
+  margin-bottom: 15px;
+
+  label {
+    color: $color_white;
+    font-size: 14px;
+    font-family: $font-title;
+  }
+
+  input, textarea {
+    width: 100%;
+    display: block;
+    background-color: transparent;
+    border: solid 1px $color_white;
+    outline: 0;
+    color: $color_white;
+    padding: 15px 10px;
+    margin-top: 2px;
+  }
+
+  textarea {
+    height: 160px;
+  }
+}
+
+.c-form__actions {
+  text-align: right;
+}

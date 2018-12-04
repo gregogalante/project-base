@@ -1,28 +1,131 @@
 .p-home {}
 
-.p-home__title {
+.p-home__absolute {
   position: absolute;
-  top: calc(50% - 100px);
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: calc(100% - 100px);
+}
+
+.p-home__absolute--cenered {
+  max-width: 400px;
+}
+
+.p-home__title {
+  margin: 0;
   color: $color_white;
   font-size: 70px;
   text-transform: uppercase;
 }
 
+.p-home__subtitle {
+  margin: 0;
+  color: $color_white;
+  font-size: 50px;
+  margin-bottom: 20px;
+  padding-bottom: 5px;
+
+  &--primary {
+    color: $color_primary;
+  }
+}
+
 .p-home__desc {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: $color_secondary;
   font-size: 30px;
-  width: calc(100% - 30px);
-  max-width: 500px;
   margin: 0;
 
   a {
     color: $color_primary;
     text-decoration: none;
+  }
+
+  b {
+    color: $color_primary;
+  }
+}
+
+.p-home__scroll {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+
+  span {
+    display: block;
+    font-size: 0.875rem;
+    margin-bottom: 12px;
+    color: $color_white;
+  }
+
+  svg {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    fill: $color_white;
+    stroke: $color_white;
+    animation: bounce 2s infinite;
+  }
+}
+
+.p-home__services-navigation {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 30px;
+  color: $color_secondary;
+  text-align: right;
+
+  li {
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: solid 1px darken($color_white, 6%);
+    cursor: pointer;
+
+    &:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    &.is-active {
+      color: $color_primary;
+    }
+  }
+}
+
+.p-home__services-contents {
+  overflow: hidden;
+
+  .flickity-slider { transform: none !important; }
+}
+
+.p-home__services-content {
+  text-align: left;
+  width: 100%;
+  left: 0 !important;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  z-index: -1;
+
+  h3 {
+    font-size: 40px;
+    color: $color_white;
+    margin: 0;
+    margin-bottom: 30px;
+  }
+
+  p {
+    color: $color_white;
+    line-height: 1.5em;
+    font-size: 24px;
+    margin: 0;
+  }
+
+  &.is-selected {
+    opacity: 1;
+    z-index: 0
   }
 }

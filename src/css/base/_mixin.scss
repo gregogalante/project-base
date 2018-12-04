@@ -18,9 +18,11 @@
 
 // Clearfix
 @mixin clearfix {
-  &:after {
-    content: "";
+  &:before, &:after {
+    content: " ";
     display: table;
+  }
+  &:after {
     clear: both;
   }
 }
@@ -62,3 +64,20 @@
     transform: translateY(-50%);
   }
 }
+
+// Animations
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -ms-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px); }
+  60% {
+    -ms-transform: translateY(-3px);
+    transform: translateY(-3px); } }
