@@ -3,8 +3,6 @@
 .c-section__content {
   position: relative;
   width: 100%;
-  height: 100vh;
-  min-height: 700px;
 
   &--primary {
     background-color: $color_primary;
@@ -18,8 +16,23 @@
 .c-section__content-half {
   position: relative;
   width: 100%;
-  height: 50%;
+  height: auto;
+}
+
+.c-section__content-half--image {
+  height: 200px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media screen and (min-width: $breakpoint_md) {
+  .c-section__content {
+    height: 100vh;
+    min-height: 700px;
+  }
+
+  .c-section__content-half {
+    height: 50%;
+  }
 }

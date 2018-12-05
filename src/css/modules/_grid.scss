@@ -31,18 +31,34 @@ $grid: (
   @include clearfix;
 }
 
-@each $name, $pixels in map-get($grid, 'breakpoints') {
-  @media screen and (min-width: $pixels) {
-    .c-grid__container {
-      max-width: $pixels;
-    }
-  }
+.c-grid__display--none {
+  display: none;
+}
+
+.c-grid__display--block {
+  display: block;
 }
 
 .c-grid__col {
   float: left;
   box-sizing: border-box;
   width: 100%;
+}
+
+@each $name, $pixels in map-get($grid, 'breakpoints') {
+  @media screen and (min-width: $pixels) {
+    .c-grid__container {
+      max-width: $pixels;
+    }
+
+    .c-grid__display--#{$name}-none {
+      display: none;
+    }
+
+    .c-grid__display--#{$name}-block {
+      display: block;
+    }
+  }
 }
 
 // Basic grid

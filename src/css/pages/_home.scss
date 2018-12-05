@@ -1,22 +1,18 @@
 .p-home {}
 
 .p-home__absolute {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: calc(100% - 100px);
+  width: 100%;
+  padding: 30px 15px;
 }
 
-.p-home__absolute--cenered {
-  max-width: 400px;
-}
+.p-home__absolute--cenered {}
 
 .p-home__title {
   margin: 0;
   color: $color_white;
-  font-size: 70px;
+  font-size: 50px;
   text-transform: uppercase;
+  padding-top: 100px;
 }
 
 .p-home__subtitle {
@@ -47,6 +43,7 @@
 }
 
 .p-home__scroll {
+  display: none;
   position: absolute;
   bottom: 15px;
   left: 50%;
@@ -100,6 +97,11 @@
 
 .p-home__services-contents {
   overflow: hidden;
+  outline: 0;
+
+  &:focus {
+    outline: 0;
+  }
 
   .flickity-slider { transform: none !important; }
 }
@@ -129,5 +131,33 @@
   &.is-selected {
     opacity: 1;
     z-index: 0
+  }
+}
+
+@media screen and (min-width: $breakpoint_md) {
+  .p-home__absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 100px);
+    padding: 0;
+  }
+
+  .p-home__absolute--cenered {
+    max-width: 400px;
+  }
+
+  .p-home__title {
+    font-size: 70px;
+    padding-top: 0;
+  }
+
+  .p-home__scroll {
+    display: block;
+  }
+
+  .p-home__desc {
+    font-size: 30px;
   }
 }
