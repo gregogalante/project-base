@@ -33,7 +33,6 @@
 }
 
 .c-header__nav {
-  display: none;
   float: right;
   margin-top: 12px;
 
@@ -46,11 +45,5 @@
   li {
     display: inline-block;
     margin-left: 15px;
-  }
-}
-
-@media screen and (min-width: $breakpoint_md) {
-  .c-header__nav {
-    display: block;
   }
 }

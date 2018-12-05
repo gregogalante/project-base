@@ -5,21 +5,36 @@
 }
 
 .c-footer__legals {
+  text-align: center;
   font-size: 12px;
   line-height: 1.5em;
+  margin-top: 15px;
 }
 
 .c-footer__social {
-  margin-top: 15px;
-  text-align: right;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.5em;
+  
 
   a {
-    text-decoration: none;
+    text-decoration: underline;
     color: $color_white;
     font-weight: bold;
 
     &:hover {
       text-decoration: underline;
     }
+  }
+}
+
+@media screen and (min-width: $breakpoint_md) {
+  .c-footer__legals {
+    text-align: right;
+    margin-top: 0;
+  }
+
+  .c-footer__social {
+    text-align: left;
   }
 }

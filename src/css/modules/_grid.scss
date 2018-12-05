@@ -32,11 +32,15 @@ $grid: (
 }
 
 .c-grid__display--none {
-  display: none;
+  display: none !important;
+}
+
+.c-grid__display--inline-block {
+  display: inline-block !important;
 }
 
 .c-grid__display--block {
-  display: block;
+  display: block !important;
 }
 
 .c-grid__col {
@@ -52,11 +56,15 @@ $grid: (
     }
 
     .c-grid__display--#{$name}-none {
-      display: none;
+      display: none !important;
+    }
+
+    .c-grid__display--#{$name}-inline-block {
+      display: inline-block !important;
     }
 
     .c-grid__display--#{$name}-block {
-      display: block;
+      display: block !important;
     }
   }
 }

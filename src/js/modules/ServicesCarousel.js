@@ -5,7 +5,8 @@ const ServicesCarousel = (() => {
   const initializeFlickity = () => {
     flickity = new Flickity( '.js-services-carousel', {
       prevNextButtons: false,
-      pageDots: false
+      pageDots: false,
+      wrapAround: true
     })
   }
 
@@ -21,11 +22,29 @@ const ServicesCarousel = (() => {
         page.classList.add('is-selected')
       })
     })
+    
+    flickity.on('change', (slide) => {
+        pages.forEach((page) => page.classList.remove('is-selected'))
+        pages[slide].classList.add('is-selected')
+    })
+  }
+
+  const initializeNext = () => {
+    const nexts = document.querySelectorAll('.js-services-carousel-next')
+
+    nexts.forEach((next) => {
+      next.addEventListener('click', (e) => {
+        e.preventDefault()
+
+        flickity.next()
+      })
+    })
   }
 
   const init = () => {
     initializeFlickity()
     initializePages()
+    initializeNext()
   }
 
   return {

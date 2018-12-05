@@ -82,7 +82,7 @@ gulp.task('build_js', function () {
   return gulp.src(jsSources)
   .pipe(jsConcat('main_concat.js'))
   .pipe(jsBabel({
-    presets: ['env']
+    presets: ['@babel/env']
   }))
   .pipe(jsUglify())
   .pipe(rename('main.min.js'))
