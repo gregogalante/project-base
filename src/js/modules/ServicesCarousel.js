@@ -17,8 +17,8 @@ const ServicesCarousel = (() => {
         const index = Array.prototype.indexOf.call(page.parentElement.children, page)
         flickity.select(index)
 
-        pages.forEach((page) => page.classList.remove('is-active'))
-        page.classList.add('is-active')
+        pages.forEach((page) => page.classList.remove('is-selected'))
+        page.classList.add('is-selected')
       })
     })
   }

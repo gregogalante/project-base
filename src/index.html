@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Static boilerplate</title>
-
+  <title>Gregorio Galante - Software engineer and web application developer</title>
+  
   <!-- Name of web application (only should be used if the website is used as an app) -->
-  <meta name="application-name" content="Application Name">
+  <meta name="application-name" content="Gregorio Galante - Software engineer and web application developer">
 
   <!-- Theme Color for Chrome, Firefox OS and Opera -->
-  <meta name="theme-color" content="#293b5a">
+  <meta name="theme-color" content="#03256C">
 
   <!-- Short description of the document (limit to 150 characters) -->
-  <meta name="description" content="A description of the page">
+  <meta name="description" content="IT consultant. Software design and development with Ruby, Javascript, Ruby on Rails, Node.js, React.js, React Native and other beautiful tecnologies. Websites development with HTML, CSS and Wordpress.">
 
   <!-- Control the behavior of search engine crawling and indexing -->
   <meta name="robots" content="index,follow"><!-- All Search Engines -->
@@ -21,28 +21,38 @@
 
   <!-- Twitter Card data -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:url" content="http://www.example.com/">
-  <meta name="twitter:title" content="Static boilerplate">
-  <meta name="twitter:description" content="Content description less than 200 characters">
-  <meta name="twitter:image" content="http://example.com/image.jpg">
+  <meta name="twitter:url" content="http://www.gregoriogalante.com">
+  <meta name="twitter:title" content="Gregorio Galante - Software engineer and web application developer">
+  <meta name="twitter:description" content="IT consultant. Software design and development with Ruby, Javascript, Ruby on Rails, Node.js, React.js, React Native and other beautiful tecnologies. Websites development with HTML, CSS and Wordpress.">
 
   <!-- Open Graph data -->
-  <meta property="og:title" content="Static boilerplate" />
-  <meta property="og:site_name" content="Static boilerplate">
+  <meta property="og:title" content="Gregorio Galante - Software engineer and web application developer" />
+  <meta property="og:site_name" content="Gregorio Galante - Software engineer and web application developer">
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="http://www.example.com/" />
-  <meta property="og:image" content="http://example.com/image.jpg" />
-  <meta property="og:description" content="Description Here" />
+  <meta property="og:url" content="http://www.gregoriogalante.com" />
+  <meta property="og:description" content="IT consultant. Software design and development with Ruby, Javascript, Ruby on Rails, Node.js, React.js, React Native and other beautiful tecnologies. Websites development with HTML, CSS and Wordpress." />
   
-
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="msapplication-TileColor" content="#03256C">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
 
-  <!--
-  <link rel="icon" sizes="192x192" href="images/icon.png">
-  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
-  <link rel="mask-icon" href="images/icon.svg" color="blue">
-  -->
+  <!-- PWA -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
   <!-- CSS files -->
   <link rel="stylesheet" href="css/main.min.css">
@@ -65,6 +75,17 @@
           </g>
         </svg>
       </div>
+
+      <nav class="c-header__nav">
+        <ul>
+          <li>
+            <a class="c-button" href="#sectionServices">What do you need?</a>
+          </li>
+          <li>
+            <a class="c-button" href="#sectionContacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </header>
 
@@ -75,10 +96,10 @@
           <div class="c-section__content c-section__content--primary">
             <h2 class="p-home__title p-home__absolute p-home__absolute--cenered">I'm<br>Gregorio<br>Galante</h2>
 
-            <div class="p-home__scroll">
+            <a class="p-home__scroll" href="#sectionServices">
               <span class="p-home__scroll-text">Services</span>
               <svg id="scroll-down" class="p-home__scroll-down bounce" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210.414 210.414" width="30" height="30"><g fill="#FFF"><path d="M105.207 0C66.532 0 35.069 31.45 35.069 70.104v70.21c0 38.653 31.463 70.1 70.138 70.1 38.675 0 70.138-31.446 70.138-70.1v-70.21C175.345 31.45 143.881 0 105.207 0zm62.345 140.314c0 34.357-27.968 62.307-62.345 62.307-34.377 0-62.345-27.95-62.345-62.307v-70.21c0-34.357 27.968-62.311 62.345-62.311 34.377 0 62.345 27.953 62.345 62.311v70.21z"></path><path d="M105.207 23.379a3.896 3.896 0 0 0-3.897 3.897v35.286a3.896 3.896 0 0 0 3.897 3.897 3.896 3.896 0 0 0 3.897-3.897V27.276a3.897 3.897 0 0 0-3.897-3.897z"></path></g></svg>
-            </div>
+            </a>
           </div>
         </div>
 
@@ -94,19 +115,19 @@
       </div>
     </section>
 
-    <section class="c-section">
+    <section class="c-section" id="sectionServices">
       <div class="c-grid__container-fluid">
         <div class="c-grid__col c-grid__col--5">
           <div class="c-section__content">
             <div class="p-home__absolute">
                 <h2 class="p-home__subtitle p-home__subtitle--primary">Services</h2>
                 <ul class="p-home__services-navigation">
-                  <li class="js-services-carousel-page active">IT Consultancy</li>
-                  <li class="js-services-carousel-page">Software design</li>
-                  <li class="js-services-carousel-page">Database management</li>
-                  <li class="js-services-carousel-page">Software development</li>
-                  <li class="js-services-carousel-page">Web application<br>development</li>
-                  <li class="js-services-carousel-page">Mobile application<br>development</li>
+                  <li class="js-services-carousel-page is-selected"><a>IT Consultancy</a></li>
+                  <li class="js-services-carousel-page"><a>Software design</a></li>
+                  <li class="js-services-carousel-page"><a>Database management</a></li>
+                  <li class="js-services-carousel-page"><a>Software development</a></li>
+                  <li class="js-services-carousel-page"><a>Web application<br>development</a></li>
+                  <li class="js-services-carousel-page"><a>Mobile application<br>development</a></li>
                 </ul>
             </div>
           </div>
@@ -140,16 +161,16 @@
                   <p>Lorem Ipsum è un testo segnaposto utilizzato nel settore della tipografia e della stampa. Lorem Ipsum è considerato il testo segnaposto standard sin dal sedicesimo secolo, quando un anonimo tipografo prese una cassetta di caratteri e li assemblò per preparare un testo campione.</p>
               </div>
             </div>
-            <div class="p-home__scroll">
+            <a class="p-home__scroll" href="#sectionContacts">
               <span class="p-home__scroll-text">Contacts</span>
               <svg id="scroll-down" class="p-home__scroll-down bounce" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 210.414 210.414" width="30" height="30"><g fill="#FFF"><path d="M105.207 0C66.532 0 35.069 31.45 35.069 70.104v70.21c0 38.653 31.463 70.1 70.138 70.1 38.675 0 70.138-31.446 70.138-70.1v-70.21C175.345 31.45 143.881 0 105.207 0zm62.345 140.314c0 34.357-27.968 62.307-62.345 62.307-34.377 0-62.345-27.95-62.345-62.307v-70.21c0-34.357 27.968-62.311 62.345-62.311 34.377 0 62.345 27.953 62.345 62.311v70.21z"></path><path d="M105.207 23.379a3.896 3.896 0 0 0-3.897 3.897v35.286a3.896 3.896 0 0 0 3.897 3.897 3.896 3.896 0 0 0 3.897-3.897V27.276a3.897 3.897 0 0 0-3.897-3.897z"></path></g></svg>
-            </div>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="c-section">
+    <section class="c-section" id="sectionContacts">
       <div class="c-grid__container-fluid">
         <div class="c-grid__col c-grid__col--7">
           <div class="c-section__content c-section__content--primary">
@@ -208,6 +229,10 @@
         vat_code <b>017878103221</b><br>
         email <b>me@gregoriogalante.com</b><br>
         registered_office <b>Via Aguzze 5/1, Casarsa (PN), Italy</b>
+      </div>
+
+      <div class="c-grid__col c-grid__col--6 c-footer__social">
+          <a href="#">github</a> - <a href="#">linkedin</a> - <a href="#">twitter</a>
       </div>
     </div>
   </footer>

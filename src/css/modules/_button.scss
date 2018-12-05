@@ -1,9 +1,22 @@
 .c-button {
-  background-color: $color_white;
-  color: $color_primary;
   border: none;
+  background: transparent;
+  background-color: transparent;
   outline: none;
+  color: $color_white;
   padding: 10px 30px;
   text-transform: uppercase;
+  text-align: center;
   font-weight: bold;
+  text-decoration: none;
+  border: solid 1px $color_white;
+
+  &:focus {
+    outline: none;
+  }
+
+  &:hover {
+    background-color: $color_white;
+    color: $color_primary;
+  }
 }

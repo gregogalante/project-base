@@ -74,24 +74,26 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  font-size: 30px;
+  font-size: 26px;
   color: $color_secondary;
   text-align: right;
 
   li {
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: solid 1px darken($color_white, 6%);
-    cursor: pointer;
+    border-bottom: solid 1px darken($color_white, 5%);
 
-    &:last-child {
-      margin-bottom: 0;
-      padding-bottom: 0;
-      border-bottom: none;
+    a {
+      display: block;
+      color: $color_secondary;
+      padding: 15px;
+      cursor: pointer;
     }
 
-    &.is-active {
-      color: $color_primary;
+    &.is-selected {
+      border-color: $color_primary;
+
+      a, span {
+        color: $color_primary;
+      }
     }
   }
 }

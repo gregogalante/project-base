@@ -8,3 +8,18 @@
   font-size: 12px;
   line-height: 1.5em;
 }
+
+.c-footer__social {
+  margin-top: 15px;
+  text-align: right;
+
+  a {
+    text-decoration: none;
+    color: $color_white;
+    font-weight: bold;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

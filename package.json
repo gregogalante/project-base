@@ -18,6 +18,7 @@
     "merge-stream": "^1.0.0"
   },
   "dependencies": {
-    "flickity": "^2.1.2"
+    "flickity": "^2.1.2",
+    "smooth-scroll": "^15.0.0"
   }
 }

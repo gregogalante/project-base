@@ -13,6 +13,7 @@ var browserSync = require('browser-sync').create()
 
 var jsSources = [
   './node_modules/flickity/dist/flickity.pkgd.min.js',
+  './node_modules/smooth-scroll/dist/smooth-scroll.min.js',
   './src/js/vendor/*.js',
   './src/js/modules/*.js',
   './src/js/main.js'
