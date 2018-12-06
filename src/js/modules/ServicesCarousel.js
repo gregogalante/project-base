@@ -6,7 +6,8 @@ const ServicesCarousel = (() => {
     flickity = new Flickity( '.js-services-carousel', {
       prevNextButtons: false,
       pageDots: false,
-      wrapAround: true
+      wrapAround: true,
+      adaptiveHeight: true
     })
   }
 

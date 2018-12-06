@@ -1,4 +1,6 @@
 .c-footer {
+  font-size: 12px;
+  line-height: 1.5em;
   width: 100%;
   padding: 30px 15px;
   color: $color_white;
@@ -6,16 +8,11 @@
 
 .c-footer__legals {
   text-align: center;
-  font-size: 12px;
-  line-height: 1.5em;
   margin-top: 15px;
 }
 
 .c-footer__social {
   text-align: center;
-  font-size: 12px;
-  line-height: 1.5em;
-  
 
   a {
     text-decoration: underline;
@@ -28,6 +25,13 @@
   }
 }
 
+.c-footer__end {
+  text-align: center;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: solid 1px $color_white;
+}
+
 @media screen and (min-width: $breakpoint_md) {
   .c-footer__legals {
     text-align: right;
@@ -36,5 +40,9 @@
 
   .c-footer__social {
     text-align: left;
+  }
+
+  .c-footer__end {
+    padding-top: 30px;
   }
 }
