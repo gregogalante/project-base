@@ -5,25 +5,24 @@
 
 $color_black: #000000;
 $color_white: #ffffff;
-$color_primary: #03256C;
-$color_secondary: #1768AC;
+$color_primary: #293b5a;
 
 // Font colors
 $color_font: $color_black;
-$color_font_title: $color_primary;
-$color_font_link: $color_primary;
+$color_font_title: $color_black;
+$color_font_link: $color_black;
 
 // Modules colors
-$color_body_bg: $color_white;
-$color_header_bg: $color_secondary;
-$color_footer_bg: $color_secondary;
+$color_body_bg: $color_primary;
+$color_header_bg: $color_primary;
+$color_footer_bg: $color_primary;
 
 // ----------------------------
 /* Fonts */
 
-$font_base: 'Montserrat', sans-serif;
-$font_default: 'Montserrat';
-$font_title: 'Arvo';
+$font_base: sans-serif;
+$font_default: Underground;
+$font_title: $font_default;
 
 // ----------------------------
 /* Size */
