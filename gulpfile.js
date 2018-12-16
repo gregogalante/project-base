@@ -1,9 +1,9 @@
+var babelify = require('babelify')
 var gulp = require('gulp')
 var rename = require('gulp-rename')
 var cssSass = require('gulp-sass')
 var cssAutoprefixer = require('gulp-autoprefixer')
-var jsConcat = require('gulp-concat')
-var jsBabel = require('gulp-babel')
+var jsBro = require('gulp-bro')
 var jsUglify = require('gulp-uglify')
 var imgImagemin = require('gulp-imagemin')
 var imgCache = require('gulp-cache')
@@ -11,12 +11,7 @@ var merge = require('merge-stream')
 
 var browserSync = require('browser-sync').create()
 
-var jsSources = [
-  './src/js/vendor/*.js',
-  './src/js/modules/*.js',
-  './src/js/main.js'
-]
-
+var jsSource = './src/js/main.js'
 var cssSources = [
   './src/css/main.scss'
 ]
@@ -50,10 +45,11 @@ gulp.task('css', function () {
 
 // JS tasks
 gulp.task('js', function () {
-  return gulp.src(jsSources)
-  .pipe(jsConcat('main_concat.js'))
-  .pipe(jsBabel({
-    presets: ['@babel/env']
+  return gulp.src(jsSource)
+  .pipe(jsBro({
+    transform: [
+      babelify.configure({ presets: ['@babel/env'] })
+    ]
   }))
   .pipe(rename('main.min.js'))
   .pipe(gulp.dest('./src/js'))
@@ -76,10 +72,11 @@ gulp.task('build_css', function () {
 
 // Build JS tasks
 gulp.task('build_js', function () {
-  return gulp.src(jsSources)
-  .pipe(jsConcat('main_concat.js'))
-  .pipe(jsBabel({
-    presets: ['@babel/env']
+  return gulp.src(jsSource)
+  .pipe(jsBro({
+    transform: [
+      babelify.configure({ presets: ['@babel/env'] })
+    ]
   }))
   .pipe(jsUglify())
   .pipe(rename('main.min.js'))

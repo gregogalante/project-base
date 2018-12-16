@@ -1,9 +1,13 @@
 const Initializer = (() => {
 
-  const init = () => {}
+  const init = () => {
+    console.log('Hello World!')
+  }
 
   return {
     init
   }
 
 })()
+
+export default Initializer
