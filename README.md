@@ -7,7 +7,7 @@ A simple static website template boilerplate with Gulp tasks manager.
 1. Configuration
 
 ```console
-npm install
+npm install | yarn install
 ```
 
 2. Development
